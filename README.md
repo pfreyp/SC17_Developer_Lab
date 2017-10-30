@@ -122,5 +122,3 @@ Result =
 TEST PASSED
 sh-4.2#
 ```
-
-This concludes the instructions on how to run the SDAccel 'helloworld_ocl' on AWS F1.
