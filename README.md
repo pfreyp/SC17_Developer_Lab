@@ -20,12 +20,12 @@ Verify that the EC2 console gives you information relative to the IP addresses a
 
 ## Remote desktop to your instance
 
-The SC'17 F1 instances are preconfigured with remote desktop services (XRDP).
-- On your local machine, start a RDP client
-   - On Windows: press the start key and start typing "remote desktop".  You should see the "Remote Desktop Connection" show in the list
+The SC17 F1 instances are preconfigured with remote desktop protocol (RDP) services.
+- From your local machine, start a remote desktop protocol client
+   - On Windows: press the start key and type "remote desktop".  You should see the "Remote Desktop Connection" program show in the list
    - On Linux: any RDP client such a Remmina or Vinagre
    - On MAC: Microsoft Remote Desktop from the Mac App Store
-- In the RDP client, put the public IP address of the EC2 instance (usually in the 'Computer' pull down of the client)
+- In the RDP client, enter the public IP address you read from the EC2 console page into the 'Computer' text entry field of the client
 - Click **Connect**
 This should bring up a message about connection certificates. 
 - Click **Yes** to proceed.
