@@ -5,7 +5,7 @@ During this session you will gain hands-on experience with AWS accelerated appli
 
 Let's get started...
 
-### Starting your EC2 F1 instance
+### Start your preconfigured EC2 F1 instance
 
 Specifically for this event, each participant has been attributed an EC2 F1 instance, a user name and password.
 
@@ -38,7 +38,7 @@ The Remote Desktop Connection window opens with a login prompt.
 - Click **Ok**
 You should now be connected to the instance.
 
-## Run the 'Hello World' example
+### Run the 'Hello World' example
 
 ### Run the emulation flows
 
