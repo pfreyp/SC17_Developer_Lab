@@ -49,13 +49,13 @@ source sdaccel_setup.sh
 source $XILINX_SDX/settings64.sh 
 ```
 
-#### Load the workshop files
+## Load the workshop files
 * Get the SC'17 developer lab Github repository to copy the necessary files
 ```
 git clone https://github.com/Xilinx/SC17_Developer_Lab
 ```
 
-### Run the emulation flows
+## Run a test application
 
 The SDAccel emulation flows allows testing, profiling and debugging the application before deploying on F1. 
 
