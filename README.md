@@ -38,7 +38,22 @@ The Remote Desktop Connection window opens with a login prompt.
 - Click **Ok**
 You should now be connected to the instance.
 
-## Verify the instance runs as expected
+## Configure the environment
+
+#### Set-up the SDAccel environment
+* In a terminal window, execute the following commands to set-up the SDAccel environment
+```
+git clone https://github.com/aws/aws-fpga.git $AWS_FPGA_REPO_DIR  
+cd $AWS_FPGA_REPO_DIR                                         
+source sdaccel_setup.sh
+source $XILINX_SDX/settings64.sh 
+```
+
+#### Load the workshop files
+* Clone the SC'17 developer lab Github repository to install the necessary files
+```
+git clone https://github.com/(TBD)
+```
 
 ### Run the emulation flows
 
