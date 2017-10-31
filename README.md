@@ -5,12 +5,12 @@ During this session you will gain hands-on experience with AWS accelerated appli
 
 Let's get started...
 
-### Start your preconfigured EC2 F1 instance
+## Start your preconfigured EC2 F1 instance
 
 Specifically for this event, each participant has been attributed an EC2 F1 instance, a user name and password.
 
 The user name and password were communicated through an email message sent a couple of days before the event.
-That email message also contained a URL that will allow you to access an instance waiting for you.
+That email message also contained a URL that will help you to access an instance waiting for you.
 *If you have not received that email, please contact one of the staff members at the beginning of the lab session.*
 
 Retrieve and navigate to that URL, it points to the AWS EC2 console management page.
@@ -20,14 +20,14 @@ Allow some time for the instance to start...
 Once the instance is running, the EC2 console gives you information relative to the **public IP address** of the instance.
 You will need that IP address for the next step.
 
-### Remote desktop to your instance
+## Remote desktop to your instance
 
 The instance you just started is preconfigured with remote desktop protocol (RDP) services.
 - From your local machine, start a remote desktop protocol client
    - On Windows: press the Windows key and type "remote desktop".  You should see the "Remote Desktop Connection" show in the list of programs.  (Alternatively you could also directly invoke mstsc.exe)
    - On Linux: any RDP client such a Remmina or Vinagre are suitable
    - On macOS: Microsoft Remote Desktop from the Mac App Store
-- In the RDP client, enter the public IP address you obtained from the EC2 console page into the 'Computer' text entry field of the client
+- In the RDP client, enter the **public IP address** you obtained from the EC2 console page into the 'Computer' text entry field of the client
 - Click **Connect**
 This should bring up a message about connection certificates. 
 - Click **Yes** to proceed.
@@ -38,7 +38,7 @@ The Remote Desktop Connection window opens with a login prompt.
 - Click **Ok**
 You should now be connected to the instance.
 
-### Run the 'Hello World' example
+## Verify the instance runs as expected
 
 ### Run the emulation flows
 
