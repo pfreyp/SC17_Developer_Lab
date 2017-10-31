@@ -9,11 +9,12 @@ Let's get started...
 
 For this lab, each participant has been attributed an instance, a user name and a password.
 
-This information has been communicated through an email message sent a couple of days before the event.
+The user name and password were communicated through an email message sent a couple of days before the event.
+That message also contained a URL that points to an instance that you will need to start.
 If you have not received that email, please contact one of the staff members at the beginning of the lab session.
 
-Retrieve and navigate to the link that points to the AWS EC2 console management page.
-You should see a stopped instance.
+Retrieve and navigate to that URL, it points to the AWS EC2 console management page.
+You should see one stopped EC2 instance.
 Start that instance (click on the "actions" pulldown button and select "start").
 After a few seconds, the instance should start...
 Verify that the EC2 console gives you information relative to the IP addresses as it's necessary for the next step.
