@@ -1,39 +1,40 @@
 # Xilinx Developer Lab - SC17
 
 Welcome to the Xilinx developer lab at SC17.
-During this session you will gain hands-on experience with AWS accelerated applications leveraging FPGA.
+During this session you will gain hands-on experience with AWS accelerated applications leveraging FPGA devices.
 
 Let's get started...
 
-## Starting your EC2 F1 instance
+### Starting your EC2 F1 instance
 
-For this lab, each participant has been attributed an instance, a user name and a password.
+Specifically for this event, each participant has been attributed an EC2 F1 instance, a user name and password.
 
 The user name and password were communicated through an email message sent a couple of days before the event.
-That message also contained a URL that points to an instance that you will need to start.
-If you have not received that email, please contact one of the staff members at the beginning of the lab session.
+That email message also contained a URL that will allow you to access an instance waiting for you.
+*If you have not received that email, please contact one of the staff members at the beginning of the lab session.*
 
 Retrieve and navigate to that URL, it points to the AWS EC2 console management page.
-You should see one stopped EC2 instance.
-Start that instance (click on the "actions" pulldown button and select "start").
-After a few seconds, the instance should start...
-Verify that the EC2 console gives you information relative to the IP addresses as it's necessary for the next step.
+You should see a stopped EC2 F1 instance.
+Start the instance (click on the "actions" pulldown button and select "start").
+Allow some time for the instance to start...
+Once the instance is running, the EC2 console gives you information relative to the **public IP address** of the instance.
+You will need that IP address for the next step.
 
-## Remote desktop to your instance
+### Remote desktop to your instance
 
-The SC17 F1 instances are preconfigured with remote desktop protocol (RDP) services.
+The instance you just started is preconfigured with remote desktop protocol (RDP) services.
 - From your local machine, start a remote desktop protocol client
-   - On Windows: press the start key and type "remote desktop".  You should see the "Remote Desktop Connection" program show in the list
-   - On Linux: any RDP client such a Remmina or Vinagre
+   - On Windows: press the Windows key and type "remote desktop".  You should see the "Remote Desktop Connection" program show in the list
+   - On Linux: any RDP client such a Remmina or Vinagre are suitable
    - On MAC: Microsoft Remote Desktop from the Mac App Store
-- In the RDP client, enter the public IP address you read from the EC2 console page into the 'Computer' text entry field of the client
+- In the RDP client, enter the public IP address you obtained from the EC2 console page into the 'Computer' text entry field of the client
 - Click **Connect**
 This should bring up a message about connection certificates. 
 - Click **Yes** to proceed.
 The Remote Desktop Connection window opens with a login prompt. 
 - Log in with the following credentials:
-   - User: centos
-   - Password: _password provided by Xilinx staff_
+   - User: **user name from the email message**
+   - Password: **xilinx_sc17**
 - Click **Ok**
 You should now be connected to the instance.
 
