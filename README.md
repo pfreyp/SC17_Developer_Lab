@@ -26,7 +26,7 @@ The instance you just started is preconfigured with remote desktop protocol (RDP
 - From your local machine, start a remote desktop protocol client
    - On Windows: press the Windows key and type "remote desktop".  You should see the "Remote Desktop Connection" program show in the list.  (You could also directly invoke mstsc.exe)
    - On Linux: any RDP client such a Remmina or Vinagre are suitable
-   - On MAC: Microsoft Remote Desktop from the Mac App Store
+   - On macOS: Microsoft Remote Desktop from the Mac App Store
 - In the RDP client, enter the public IP address you obtained from the EC2 console page into the 'Computer' text entry field of the client
 - Click **Connect**
 This should bring up a message about connection certificates. 
