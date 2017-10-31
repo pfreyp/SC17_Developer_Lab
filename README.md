@@ -20,7 +20,7 @@ Allow some time for the instance to start...
 Once the instance is running, the EC2 console gives you information relative to the **public IP address** of the instance.
 You will need that IP address for the next step.
 
-## Remote desktop to your instance
+## \"Remote desktop\" to your instance
 
 The instance just started is preconfigured with remote desktop protocol (RDP) services.
 - From your local machine, start a remote desktop protocol client
@@ -38,9 +38,8 @@ The Remote Desktop Connection window opens with a login prompt.
 - Click **Ok**
 You should now be connected to the instance.
 
-## Configure the environment
+## Configure the Xilinx SDAccel environment and load the workshop files
 
-#### Setup the Xilinx SDAccel environment
 * In a terminal window, execute the following commands to setup the SDAccel environment
 ```
 git clone https://github.com/aws/aws-fpga.git $AWS_FPGA_REPO_DIR  
@@ -49,7 +48,6 @@ source sdaccel_setup.sh
 source $XILINX_SDX/settings64.sh 
 ```
 
-## Load the workshop files
 * Get the SC'17 developer lab Github repository to copy the necessary files
 ```
 git clone https://github.com/Xilinx/SC17_Developer_Lab
