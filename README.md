@@ -5,9 +5,9 @@ During this session you will gain hands-on experience with AWS accelerated appli
 
 Let's get started...
 
-## Start your preconfigured EC2 F1 instance
+## Start a preconfigured EC2 F1 instance
 
-Specifically for this event, each participant has been attributed an EC2 F1 instance, a user name and password.
+Specially for this event, each participant has been attributed an EC2 F1 instance, a user name and password.
 
 The user name and password were communicated through an email message sent a couple of days before the event.
 That email message also contained a URL that will help you to access an instance waiting for you.
@@ -22,7 +22,7 @@ You will need that IP address for the next step.
 
 ## Remote desktop to your instance
 
-The instance you just started is preconfigured with remote desktop protocol (RDP) services.
+The instance just started is preconfigured with remote desktop protocol (RDP) services.
 - From your local machine, start a remote desktop protocol client
    - On Windows: press the Windows key and type "remote desktop".  You should see the "Remote Desktop Connection" show in the list of programs.  (Alternatively you could also directly invoke mstsc.exe)
    - On Linux: any RDP client such a Remmina or Vinagre are suitable
@@ -40,8 +40,8 @@ You should now be connected to the instance.
 
 ## Configure the environment
 
-#### Set-up the SDAccel environment
-* In a terminal window, execute the following commands to set-up the SDAccel environment
+#### Setup the Xilinx SDAccel environment
+* In a terminal window, execute the following commands to setup the SDAccel environment
 ```
 git clone https://github.com/aws/aws-fpga.git $AWS_FPGA_REPO_DIR  
 cd $AWS_FPGA_REPO_DIR                                         
@@ -50,9 +50,9 @@ source $XILINX_SDX/settings64.sh
 ```
 
 #### Load the workshop files
-* Clone the SC'17 developer lab Github repository to install the necessary files
+* Get the SC'17 developer lab Github repository to copy the necessary files
 ```
-git clone https://github.com/(TBD)
+git clone https://github.com/Xilinx/SC17_Developer_Lab
 ```
 
 ### Run the emulation flows
