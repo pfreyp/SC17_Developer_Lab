@@ -15,10 +15,15 @@ That email message also contained a URL that will help you to access an instance
 If you have not received that email, please contact a staff member at the beginning of the lab session.
 ```
 Retrieve and navigate to that URL, it points to the AWS EC2 console management page.
+
 Enter the Account ID communicated by the staff.
+
 Click "Next"
+
 Enter the IAM user name received in the email mentioned above and the password.
+
 Click "Sign In"
+
 You should see one stopped EC2 F1 instance.
 Start the instance (click on the "actions" pulldown button and select "start").
 Allow some time for the instance to start...
