@@ -12,18 +12,20 @@ For this event, each participant has been attributed an EC2 F1 instance, a user 
 The user name and password were communicated through an email message sent a couple of days before the event.
 That email message also contained a URL that will help you to access an instance waiting for you.
 ```
-If you have not received that email, please contact one of the staff members at the beginning of the lab session.
+If you have not received that email, please contact a staff member at the beginning of the lab session.
 ```
 Retrieve and navigate to that URL, it points to the AWS EC2 console management page.
-Enter the Account ID given by the staff.
-Enter the IAM user name received in the email mentioned above and password.
-You should see a stopped EC2 F1 instance.
+Enter the Account ID communicated by the staff.
+Click "Next"
+Enter the IAM user name received in the email mentioned above and the password.
+Click "Sign In"
+You should see one stopped EC2 F1 instance.
 Start the instance (click on the "actions" pulldown button and select "start").
 Allow some time for the instance to start...
 Once the instance is running, the EC2 console gives you information relative to the **public IP address** of the instance.
 You will use that IP address for the next step.
 
-## \"Remote desktop\" to your instance
+## \"Remote desktop\" to the instance
 
 The instance just started is preconfigured with remote desktop protocol (RDP) services.
 - From your local machine, start a remote desktop protocol client
