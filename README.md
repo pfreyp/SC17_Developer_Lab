@@ -10,7 +10,7 @@ Let's get started...
 For this event, each participant has been attributed an EC2 F1 instance, a user name and password.
 
 The user name and password were communicated through an email message sent a couple of days before the event.
-That email message also contained a URL that will help you to access an instance waiting for you.
+The message contains a URL that will help you access an EC2 F1 instance.
 ```
 If you have not received that email, please contact a staff member at the beginning of the lab session.
 ```
