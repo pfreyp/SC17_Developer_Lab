@@ -7,12 +7,13 @@ Let's get started...
 
 ## Start a preconfigured EC2 F1 instance
 
-Specially for this event, each participant has been attributed an EC2 F1 instance, a user name and password.
+For this event, each participant has been attributed an EC2 F1 instance, a user name and password.
 
 The user name and password were communicated through an email message sent a couple of days before the event.
 That email message also contained a URL that will help you to access an instance waiting for you.
+```
 *If you have not received that email, please contact one of the staff members at the beginning of the lab session.*
-
+```
 Retrieve and navigate to that URL, it points to the AWS EC2 console management page.
 You should see a stopped EC2 F1 instance.
 Start the instance (click on the "actions" pulldown button and select "start").
