@@ -3,7 +3,7 @@
 Welcome to the Xilinx developer lab at SC17.
 During this session you will gain hands-on experience with AWS accelerated applications leveraging FPGA devices.
 
-Let's get started :rocket:
+Let's get started...
 
 ## Start a preconfigured EC2 F1 instance
 
@@ -46,16 +46,16 @@ You should now be connected to the instance.
 
 ## Configure the Xilinx SDAccel environment and load the workshop files
 
-* In a terminal window, execute the following commands to setup the SDAccel environment
-```
-git clone https://github.com/aws/aws-fpga.git $AWS_FPGA_REPO_DIR  
+* Open a terminal window, execute the following commands to setup the SDAccel environment (AWS_FPGA_REPO_DIR and XILINX_SDX are predefined)
+```  
 cd $AWS_FPGA_REPO_DIR                                         
 source sdaccel_setup.sh
 source $XILINX_SDX/settings64.sh 
 ```
 
-* Get the SC'17 developer lab Github repository to copy the necessary files
+* Get the SC17 developer lab Github repository to copy the necessary files
 ```
+cd $AWS_FPGA_REPO_DIR
 git clone https://github.com/Xilinx/SC17_Developer_Lab
 ```
 
