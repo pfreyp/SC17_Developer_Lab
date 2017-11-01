@@ -1,3 +1,4 @@
+:rocket:
 # Xilinx Developer Lab - SC17
 
 Welcome to the Xilinx developer lab at SC17.
