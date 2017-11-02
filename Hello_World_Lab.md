@@ -1,4 +1,4 @@
-# Xilinx Developer Lab - SC17
+# Hello World Lab - SC17
 
 
 ## Run a test application
