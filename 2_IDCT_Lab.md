@@ -26,7 +26,7 @@ The design is a Inverse Discrete Cosine Transform, which is used heavily in audi
 This example assumes:
 *   The aws-fpga git is cloned into directory ~/aws-fpga
 
-*   The actual design files krnl_idct.cpp and idct.cpp is present in ~/idct/src/
+*   The actual design files krnl_idct.cpp and idct.cpp is present in ~/SC17_Developer_Lab/idct/src/
 
     If any of these directories are different in your setup, please replace any reference in the tutorial to point to your installation directories. 
 
@@ -96,7 +96,7 @@ This section shows how to setup SDAccel. It includes how to import source files 
 1. In the **Import** window, navigate to **General &gt; File System**. Click **Next**.  
 ![](./idctFigures/FileSystemImport.PNG)
 
-1. In the next window, click **Browse** and navigate to where the **IDCT** source files are located (~/idct/src). Click **OK** to accept the source directory. The file system will then show the two files contained in the directory. Select both files and click **Finish**.  
+1. In the next window, click **Browse** and navigate to where the **IDCT** source files are located (~/SC17_Developer_Lab/idct/src). Click **OK** to accept the source directory. The file system will then show the two files contained in the directory. Select both files and click **Finish**.  
 ![](./idctFigures/FileSelectImport.PNG)
 
 1. Use **Project Explorer**to verify that both files were included in the project. Expand the **src** file to and check to ensure all files were added successfully.  
@@ -137,7 +137,7 @@ This section shows how to setup SDAccel. It includes how to import source files 
 
     Again, select **[All configurations]** from the Configuration dropdown menu to ensure that the mapping is applied to all build configurations. Next, select the **Tool Settings** tab and navigate to the **SDx XOCC Kernel Compiler -&gt; Miscellaneous** section (see below). On the right hand side, you can specify additional compile options. Add the following and click **OK** to confirm.
     ```
-    --xp prop:solution.hls_pre_tcl=~/idct/support/config.tcl
+    --xp prop:solution.hls_pre_tcl=~/SC17_Developer_Lab/idct/support/config.tcl
     ```  
     ![](./idctFigures/XOCCKrnlCompiler.PNG)
 
@@ -312,12 +312,12 @@ You can try it with the preregistered AFI ID for this tutorial: **afi-0d59c0f2d5
 
 A good starting point regarding the specifics of the Amazon SDAccel flow is the ![Quick Start Guide to Accelerating your C/C++ application on AWS F1 FPGA Instance with SDAccel](https://github.com/aws/aws-fpga/blob/master/SDAccel/README.md)
 
-The registration process creates also a secure bitstream handle "binary_container_1.awsxclbin". This handle is provided to you in your idct directory (~/idct/xclbin/binary_container_1.awsxclbin). Since there is no difference in the host executable, we can run the hardware emulation idct executable with the secure bitstream handle, executing the algorithm on the FPGA.
+The registration process creates also a secure bitstream handle "binary_container_1.awsxclbin". This handle is provided to you in your idct directory (~/SC17_Developer_Lab/idct/xclbin/binary_container_1.awsxclbin). Since there is no difference in the host executable, we can run the hardware emulation idct executable with the secure bitstream handle, executing the algorithm on the FPGA.
 
 ``` shell
 sudo sh
 source /opt/Xilinx/SDx/2017.1.rte/setup.sh
-<workspace>/IDCT/Emulation-HW/IDCT.exe ~/idct/xclbin/binary_container_1.awsxclbin
+<workspace>/IDCT/Emulation-HW/IDCT.exe ~/SC17_Developer_Lab/idct/xclbin/binary_container_1.awsxclbin
 ```
 
 Please note, the performance differences between the CPU run and the FPGA accelerated implementation.
