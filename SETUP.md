@@ -1,9 +1,6 @@
 # Lab Setup - SC17
 
-Welcome to the Xilinx developer lab at SC17.
-During this session you will gain hands-on experience with AWS accelerated applications leveraging FPGA devices.
-
-Let's get started...
+In this section of the Lab, we will be setting up our instance and validating the flow with a simple example.
 
 ## Start a preconfigured EC2 F1 instance
 
