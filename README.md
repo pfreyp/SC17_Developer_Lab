@@ -12,7 +12,7 @@ In this section, you will access an EC2 F1 machine pre-configured with Gnome. Yo
 
 ## 2. Running "hello world"
 
-Running a basic vector addition example showcases the main verification phases (software and hardware emulation) and runs the AFI (Amazon FPGA Image) on the FPGA target.
+Running a basic vector addition example showcases the main verification phases (software and hardware emulation) and runs the AFI (Amazon FPGA Image) on the FPGA target. Link to the [Hello World Lab](Hello_World_Lab.md)
 
 ## 3. The IDCT Lab
 
