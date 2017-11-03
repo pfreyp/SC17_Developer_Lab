@@ -564,7 +564,7 @@ int main(int argc, char* argv[]) {
   int banks = 1;
   const size_t cus = banks;
   const size_t threads = cus;
-  size_t numBlocks64 = 65536;
+  size_t numBlocks64 = 512; // 2^16
 
   if (xcl_mode != NULL) {
     numBlocks64 = 256;
