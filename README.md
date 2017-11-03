@@ -8,6 +8,6 @@ Let's get started...
 ## Session setup
 
 In this section, you will access a pre-configured machine and remote desktop to that machine.
-A [Setting up the session](file://./setup.md).
+[Setting up the session](Setup.md).
 
 
