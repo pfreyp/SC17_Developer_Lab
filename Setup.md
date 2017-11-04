@@ -13,9 +13,9 @@ If you have not received that email, please contact a staff member at the beginn
 ```
 - Retrieve and navigate to that URL, it points to the AWS EC2 console management page.
 - Enter the Account ID communicated by the staff.
-- Click "Next"
+- Click "Next".
 - Enter the IAM user name received in the email mentioned above and the password.
-- Click "Sign In"
+- Click "Sign In".
 
 You should see one stopped EC2 F1 instance.
 Start the instance (click on the "actions" pulldown button and select "start").
