@@ -52,7 +52,7 @@ source $XILINX_SDX/settings64.sh
 
 * Get the SC17 developer lab Github repository to copy the necessary files
 ```
-cd $AWS_FPGA_REPO_DIR
+cd /home/centos
 git clone https://github.com/Xilinx/SC17_Developer_Lab
 ```
 
@@ -62,7 +62,7 @@ The SDAccel emulation flows allows testing, profiling and debugging the applicat
 
 * Navigate to the 'helloworld_ocl' example directory
 ```
-cd <TBD>/helloworld_ocl/
+cd /home/centos/helloworld_ocl/
 ```
 
 * Run the SW Emulation flow
@@ -91,7 +91,7 @@ Since the creation of the .awsxclbin file and AFI are not instantaneous, they ha
 ```
 aws ec2 describe-fpga-images --fpga-image-ids <AFI ID>
 ```
-* Check that the output contains:
+* Check that the output log of the previous command contains:
 ```
 ...
 "State": {
