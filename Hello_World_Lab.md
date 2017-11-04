@@ -41,9 +41,14 @@ To deploy and execute on F1 you need the host application binary (helloworld) an
 The .awsxclbin is read by the host application to determine which Amazon FPGA Image (AFI) should be loaded in the FPGA.
 Since the creation of that file and AFI are not instantaneous, they have been pre-generated to save time.
 
+* Change directory to access pre-compiled binaries
+```
+cd ./preconfigured
+```
+
 * Confirm that the AFI is ready to be used
 ```
-aws ec2 describe-fpga-images --fpga-image-ids <AFI ID>
+aws ec2 describe-fpga-images --fpga-image-ids afi-0f47c8a14a646f4f8
 ```
 * Check that the output contains:
 ```
