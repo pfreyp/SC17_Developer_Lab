@@ -8,23 +8,27 @@ cd /home/centos/helloworld_ocl/
 ## Design files
 
 The application code is located in the src directory. The host and accelerator binary files are pre-compiled and included in the precompiled directory.
-
+```
 Makefile
 description.json
 src/host.cpp
 src/vector_addition.cl
-
+precompiled/hello_world
+precompiled/.awsxclbin
+```
 ## Run both software and hardware emulation
 
 As part of the capabilities available to an application developer, SDAccel includes environments to test the correctness of an application at both a software functional level and a hardware emulated level. These modes, which are named sw_emu and hw_emu, allow the developer to profile and evaluate the performance of a design before compiling for board execution. It is strongly recommended that all applications be executed in at least the sw_emu mode before executed on an FPGA board.
 
 * Run the SW Emulation flow
+The software emulation flow is a functional correctness check only. 
 ```
 make clean
 make check TARGETS=sw_emu DEVICES=$AWS_PLATFORM all
 ```
 
 * Run the HW Emulation flow
+The hardware emulation flow is a cycle accurate simulation of the hardware generated for the application. As such, it is expected for this simulation to take longer time.
 ```
 make clean
 make check TARGETS=hw_emu DEVICES=$AWS_PLATFORM all
