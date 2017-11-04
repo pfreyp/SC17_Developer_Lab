@@ -20,7 +20,9 @@ precompiled/vector_addition.hw.xilinx_aws-vu9p-f1_4ddr-xpr-2pr_4_0.awsxclbin
 As part of the capabilities available to an application developer, SDAccel includes environments to test the correctness of an application at both a software functional level and a hardware emulated level. These modes, which are named sw_emu and hw_emu, allow the developer to profile and evaluate the performance of a design before compiling for board execution. It is strongly recommended that all applications be checked in at least the sw_emu mode before execution on FPGA accelerator.
 
 * Run the SW Emulation flow
+
 The software emulation flow is a functional correctness check only.
+
 Note that the make file depends on the location of the common repository for includes.
 They are expected to be found here: /home/centos/src/project_data/aws-fpga/SDAccel/examples/xilinx
 Edit that path (first line of the make file if needed)
