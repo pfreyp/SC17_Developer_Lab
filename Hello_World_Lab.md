@@ -1,9 +1,17 @@
 # Hello World Lab - SC17
 
+## Design files
+
+The application code is located in the src directory. The host and accelerator binary files are pre-compiled and included in the precompiled directory.
+
+Makefile
+description.json
+src/host.cpp
+src/vector_addition.cl
 
 ## Run both software and hardware emulation
 
-The SDAccel emulation flows allows testing, profiling and debugging the application before deploying on F1. 
+As part of the capabilities available to an application developer, SDAccel includes environments to test the correctness of an application at both a software functional level and a hardware emulated level. These modes, which are named sw_emu and hw_emu, allow the developer to profile and evaluate the performance of a design before compiling for board execution. It is strongly recommended that all applications be executed in at least the sw_emu mode before executed on an FPGA board.
 
 * Navigate to the 'helloworld_ocl' example directory
 ```
