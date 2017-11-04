@@ -20,10 +20,9 @@ Please note that in order to save time, the AFI (Amazon FPGA Image) was created 
 ## 3. The IDCT Lab
 
 The Discrete Cosine Transform (DCT) and its inverse (IDCT) transform time domain signals or images into a spatial domain. This  transformation allows very efficient compression algorithms used in most video codec.
-- [IDCT Lab Instructions](IDCT_Lab.md)
+- Please follow the [IDCT Lab Instructions](IDCT_Lab.md)
 
 ## 4. The FFMPEG Lab
 
 The FFMPEG framework provides the infrastructure and implementation to effectively work with a wide variety of codecs. This framework is introduced in this tutorial and it is shown how to effectively integrate hardware accelerated algorithms.
 - Please refer to the [FFMPEG Lab Instructions](FFMPEG_Lab.md) to proceed.
-
