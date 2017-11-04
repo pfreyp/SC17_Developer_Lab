@@ -10,7 +10,7 @@ Let's get started...
 In this initial section, you will access a pre-configured EC2 F1 instance. You will "remote desktop" to that instance. You will then load the Lab design files and associated instructions.
 [Setting up the session](Setup.md).
 
-## 2. Running "hello world"
+## 2. The "hello world" Vector Addition Lab
 
 Running a basic vector addition example showcases the main phases of verification with both software and hardware emulation.
 Finally running the example's kernel on the actual hardware to confirm the output matches the emulation results.
