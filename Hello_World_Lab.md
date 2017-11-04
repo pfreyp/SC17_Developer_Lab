@@ -62,8 +62,8 @@ aws ec2 describe-fpga-images --fpga-image-ids afi-0f47c8a14a646f4f8
 ```
 
 * Execute the host application on F1:
+
 ```
-cd ..
 sudo sh
 source /opt/Xilinx/SDx/2017.1.rte/setup.sh
 chmod u+x helloworld
