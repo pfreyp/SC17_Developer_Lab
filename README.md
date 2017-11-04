@@ -24,5 +24,5 @@ The Inverse DCT transform is at the base of the majority of video codecs, it's t
 
 ## 4. The FFMPEG Lab
 
-To be deployed at a later date...
+The FFMPEG framework provides the infrastructure and implementation to effectively work with a wide variety of codecs. This framework is introduced in this tutorial and it is shown how to effectively integrate hardware accelerated algorithms. Please refer to the [FFMPEG lab guide](FFMPEG_Lab.md) for more details.
 
