@@ -10,7 +10,6 @@ cd /home/centos/SC17_Developer_Lab/helloworld_ocl
 The application code is located in the src directory. The host and accelerator binary files are pre-compiled and included in the precompiled directory.
 ```
 Makefile
-description.json
 src/host.cpp
 src/vector_addition.cl
 precompiled/hello_world
