@@ -1,13 +1,13 @@
 # Hello World Lab - SC17
 
 
-## Run a test application
+## Run software and hardware emulation
 
 The SDAccel emulation flows allows testing, profiling and debugging the application before deploying on F1. 
 
 * Navigate to the 'helloworld_ocl' example directory
 ```
-cd <TBD>/helloworld_ocl/
+cd /home/centos/helloworld_ocl/
 ```
 
 * Run the SW Emulation flow
@@ -24,11 +24,11 @@ make clean
 make check TARGETS=hw_emu DEVICES=$AWS_PLATFORM all
 ```
 
-### Deploy the host application on F1
+## Run the kernel onto the F1 accelerator
 
-To deploy and execute on F1 you need the host application (helloworld) and the AWS FPGA binary (vector_addition.hw.xilinx_aws-vu9p-f1_4ddr-xpr-2pr_4_0.awsxclbin).
+To deploy and execute on F1 you need the host application binary (helloworld) and the AWS FPGA binary (vector_addition.hw.xilinx_aws-vu9p-f1_4ddr-xpr-2pr_4_0.awsxclbin).
 
-The *.awsxclbin is read by the host application to determine which Amazon FPGA Image (AFI) should be loaded in the FPGA.
+The \*.awsxclbin is read by the host application to determine which Amazon FPGA Image (AFI) should be loaded in the FPGA.
 
 Since the creation of the .awsxclbin file and AFI are not instantaneous, they have been pre-generated to streamline this workshop.
 
