@@ -18,7 +18,7 @@ precompiled/.awsxclbin
 ```
 ## Run both software and hardware emulation
 
-As part of the capabilities available to an application developer, SDAccel includes environments to test the correctness of an application at both a software functional level and a hardware emulated level. These modes, which are named sw_emu and hw_emu, allow the developer to profile and evaluate the performance of a design before compiling for board execution. It is strongly recommended that all applications be executed in at least the sw_emu mode before executed on an FPGA board.
+As part of the capabilities available to an application developer, SDAccel includes environments to test the correctness of an application at both a software functional level and a hardware emulated level. These modes, which are named sw_emu and hw_emu, allow the developer to profile and evaluate the performance of a design before compiling for board execution. It is strongly recommended that all applications be checked in at least the sw_emu mode before execution on FPGA accelerator.
 
 * Run the SW Emulation flow
 The software emulation flow is a functional correctness check only. 
