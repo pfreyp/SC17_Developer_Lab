@@ -47,7 +47,8 @@ cd ./preconfigured
 ```
 
 * Confirm that the AFI is ready to be used
-Note that in the context of this workshop, the command below might request you might not go through directly.  It might ask you to run 'aws configure' but that inormation might not be available.  If that's the case just move to the next step.
+
+Note that in the context of this workshop, the command below might not go through directly.  It might ask you to run 'aws configure' but that information might not be available.  If you cannot runthis command just move to the next step.
 ```
 aws ec2 describe-fpga-images --fpga-image-ids afi-0f47c8a14a646f4f8
 ```
@@ -64,7 +65,8 @@ aws ec2 describe-fpga-images --fpga-image-ids afi-0f47c8a14a646f4f8
 ```
 cd ..
 sudo sh
-source /opt/Xilinx/SDx/2017.1.rte/setup.sh   
+source /opt/Xilinx/SDx/2017.1.rte/setup.sh
+chmod u+x helloworld
 ./helloworld 
 ```
 
