@@ -7,12 +7,15 @@ Let's get started...
 
 ## 1. Session setup
 
-In this section, you will access an EC2 F1 machine pre-configured with Gnome. You will "remote desktop" to that machine and load the Lab design files and instructions.
+In this initial section, you will access an EC2 F1 machine pre-configured with the Gnome windows environment. You will "remote desktop" to that machine. You will then load the Lab design files and associated instructions.
 [Setting up the session](Setup.md).
 
 ## 2. Running "hello world"
 
-Running a basic vector addition example showcases the main verification phases (software and hardware emulation) and runs the AFI (Amazon FPGA Image) on the FPGA target. Link to the [Hello World Lab](Hello_World_Lab.md)
+Running a basic vector addition example showcases the main phases of verification with both the software and hardware emulation.
+Then you will run the example on the actual hardware and confirm the final output does match the emulation results.
+Note that in order to save time, the AFI (Amazon FPGA Image) was created in advance. 
+Link to the [Hello World Lab](Hello_World_Lab.md)
 
 ## 3. The IDCT Lab
 
