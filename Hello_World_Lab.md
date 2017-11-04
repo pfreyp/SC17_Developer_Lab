@@ -14,7 +14,7 @@ description.json
 src/host.cpp
 src/vector_addition.cl
 precompiled/hello_world
-precompiled/.awsxclbin
+precompiled/vector_addition.hw.xilinx_aws-vu9p-f1_4ddr-xpr-2pr_4_0.awsxclbin
 ```
 ## Run both software and hardware emulation
 
