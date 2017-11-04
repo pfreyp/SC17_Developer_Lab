@@ -39,7 +39,7 @@ make check TARGETS=hw_emu DEVICES=$AWS_PLATFORM all
 To deploy and execute on F1 you need the host application binary (helloworld) and the AWS FPGA binary (vector_addition.hw.xilinx_aws-vu9p-f1_4ddr-xpr-2pr_4_0.awsxclbin).
 
 The .awsxclbin is read by the host application to determine which Amazon FPGA Image (AFI) should be loaded in the FPGA.
-Since the creation of that file and AFI are not instantaneous, they have been pre-generated to save time.
+Generating the AFI takes time as a full FPGA implementation must take place. For this example, the AFI was created in advance to save time.
 
 * Change directory to access pre-compiled binaries
 ```
@@ -48,7 +48,7 @@ cd ./preconfigured
 
 * Confirm that the AFI is ready to be used
 
-Note that in the context of this workshop, the command below might not go through directly.  It might ask you to run 'aws configure' but that information might not be available.  If you cannot runthis command just move to the next step.
+Note that in the context of this workshop, the command below might not go through directly.  It might ask you to run 'aws configure'.  If you cannot run this command just move to the next below called "Execute the host application on F1".
 ```
 aws ec2 describe-fpga-images --fpga-image-ids afi-0f47c8a14a646f4f8
 ```
