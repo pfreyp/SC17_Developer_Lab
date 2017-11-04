@@ -5,21 +5,21 @@ During this session you will gain hands-on experience with AWS accelerated appli
 
 Let's get started...
 
-## 1. Session setup
+## 1. Getting Setup
 
-In this initial section, you will access an EC2 F1 machine pre-configured with the Gnome windows environment. You will "remote desktop" to that machine. You will then load the Lab design files and associated instructions.
+In this initial section, you will access a pre-configured EC2 F1 instance. You will "remote desktop" to that instance. You will then load the Lab design files and associated instructions.
 [Setting up the session](Setup.md).
 
 ## 2. Running "hello world"
 
-Running a basic vector addition example showcases the main phases of verification with both the software and hardware emulation.
-Then you will run the example on the actual hardware and confirm the final output does match the emulation results.
-Note that in order to save time, the AFI (Amazon FPGA Image) was created in advance. 
+Running a basic vector addition example showcases the main phases of verification with both software and hardware emulation.
+Finally running the example's kernel on the actual hardware to confirm the output matches the emulation results.
+Please note that in order to save time, the AFI (Amazon FPGA Image) was created in advance. 
 Link to the [Hello World Lab](Hello_World_Lab.md)
 
 ## 3. The IDCT Lab
 
-The Inverse DCT transform is at the base of the majority of video codecs, it's the crucial transformation from time to frequency domain that allows very efficient compression.
+The Discrete Cosine Transform (DCT) and its inverse (IDCT) transform time domain signals or images into a spatial domain. This  transformation allows very efficient compression algorithms used in most video codec.
 [IDCT Lab](IDCT_Lab.md)
 
 ## 4. The FFMPEG Lab
