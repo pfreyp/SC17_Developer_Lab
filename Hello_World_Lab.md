@@ -2,7 +2,7 @@
 
 * Navigate to the 'helloworld_ocl' example directory
 ```
-cd /home/centos/helloworld_ocl
+cd /home/centos/SC17_Developer_Lab/helloworld_ocl
 ```
 
 ## Design files
