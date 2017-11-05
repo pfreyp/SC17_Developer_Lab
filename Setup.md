@@ -47,7 +47,8 @@ You should now be connected to the instance.
 ```  
 cd /home/centos
 git clone https://github.com/aws/aws-fpga.git
-export AWS_FPGA_REPO_DIR=/home/centos/aws-fpga                                    
+export AWS_FPGA_REPO_DIR=/home/centos/aws-fpga
+cd $AWS_FPGA_REPO_DIR
 source sdaccel_setup.sh
 source $XILINX_SDX/settings64.sh 
 ```
