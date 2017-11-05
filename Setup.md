@@ -53,5 +53,5 @@ source $XILINX_SDX/settings64.sh
 * Get the SC17 developer lab Github repository to copy the necessary files
 ```
 cd /home/centos
-git clone https://github.com/Xilinx/SC17_Developer_Lab
+git clone https://github.com/Xilinx/SC17_Developer_Lab.git
 ```
