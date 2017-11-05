@@ -43,9 +43,9 @@ You should now be connected to the instance.
 
 ## Configure the Xilinx SDAccel environment and load the workshop files
 
-* Open a terminal window, execute the following commands to setup the SDAccel environment (AWS_FPGA_REPO_DIR and XILINX_SDX are predefined)
+* Open a terminal window, execute the following commands to setup the SDAccel environment
 ```  
-cd $AWS_FPGA_REPO_DIR                                         
+export AWS_FPGA_REPO_DIR=/home/centos/aws-fpga                                    
 source sdaccel_setup.sh
 source $XILINX_SDX/settings64.sh 
 ```
