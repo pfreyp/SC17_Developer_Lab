@@ -107,3 +107,7 @@ Result =
 TEST PASSED
 sh-4.2#
 ```
+After succesfully running this design, type the exit command to return to the initial shell
+```
+exit
+```
