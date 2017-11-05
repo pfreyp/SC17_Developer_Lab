@@ -45,6 +45,8 @@ You should now be connected to the instance.
 
 * Open a terminal window, execute the following commands to setup the SDAccel environment
 ```  
+cd /home/centos
+git clone https://github.com/aws/aws-fpga.git
 export AWS_FPGA_REPO_DIR=/home/centos/aws-fpga                                    
 source sdaccel_setup.sh
 source $XILINX_SDX/settings64.sh 
