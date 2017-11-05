@@ -48,7 +48,7 @@ Generating the AFI takes time as a full FPGA implementation must take place. For
 
 * Change directory to access pre-compiled binaries
 ```
-cd ./preconfigured
+cd ./precompiled
 ```
 
 * Confirm that the AFI is ready to be used
