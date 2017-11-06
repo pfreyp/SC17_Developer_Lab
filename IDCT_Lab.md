@@ -297,7 +297,7 @@ Now that we have fully optimized version of the design, we are ready to build th
 Once the bitstream is available, in the Amazon F1 instance it is necessary to register the kernel with the secure storage system. This is performed with the help of the **create_sdaccel_afi.sh** script. Running this script kicks off the registration process and it's completion can be verified using the following command.
 
 ``` shell
-aws ec2 describe-fpga-images --fpga-image-ids <AFI ID>
+aws ec2 describe-fpga-images --fpga-image-ids afi-0d59c0f2d5fe9df1f
 ```
 
 You can try it with the preregistered AFI ID for this tutorial: **afi-0d59c0f2d5fe9df1f**. The output of this command should contain:
@@ -317,7 +317,7 @@ The registration process creates also a secure bitstream handle "binary_containe
 ``` shell
 sudo sh
 source /opt/Xilinx/SDx/2017.1.rte/setup.sh
-<workspace>/IDCT/Emulation-HW/IDCT.exe ~/SC17_Developer_Lab/idct/xclbin/binary_container_1.awsxclbin
+/home/centos/workspace/IDCT/Emulation-HW/IDCT.exe /home/centos/SC17_Developer_Lab/idct/xclbin/binary_container_1.awsxclbin
 ```
 
 Please note, the performance differences between the CPU run and the FPGA accelerated implementation.
