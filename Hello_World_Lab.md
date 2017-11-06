@@ -7,7 +7,7 @@ cd /home/centos/SC17_Developer_Lab/helloworld_ocl
 
 ## Design files
 
-The application code is located in the src directory. The host and accelerator binary files are pre-compiled and included in xclbin directory.
+The application source code is located in the src directory. The host and accelerator binary files are pre-compiled and included in xclbin directory.
 ```
 Makefile
 src/host.cpp
