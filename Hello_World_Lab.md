@@ -7,13 +7,13 @@ cd /home/centos/SC17_Developer_Lab/helloworld_ocl
 
 ## Design files
 
-The application code is located in the src directory. The host and accelerator binary files are pre-compiled and included in the precompiled directory.
+The application code is located in the src directory. The host and accelerator binary files are pre-compiled and included in xclbin directory.
 ```
 Makefile
 src/host.cpp
 src/vector_addition.cl
-precompiled/hello_world
-precompiled/vector_addition.hw.xilinx_aws-vu9p-f1_4ddr-xpr-2pr_4_0.awsxclbin
+xclbin/hello_world
+xclbin/vector_addition.hw.xilinx_aws-vu9p-f1_4ddr-xpr-2pr_4_0.awsxclbin
 ```
 ## Run both software and hardware emulation
 
@@ -48,22 +48,7 @@ Generating the AFI takes time as a full FPGA implementation must take place. For
 
 * Change directory to access pre-compiled binaries
 ```
-cd ./precompiled
-```
-
-* Confirm that the AFI is ready to be used
-
-Note that in the context of this workshop, the command below might not go through directly.  It might ask you to run 'aws configure'.  If you cannot run this command just move to the next below called "Execute the host application on F1".
-```
-aws ec2 describe-fpga-images --fpga-image-ids afi-0f47c8a14a646f4f8
-```
-* Check that the output contains:
-```
-...
-"State": {
-    "Code": "available"
- },
-...
+cd ./xclbin
 ```
 
 * Execute the host application on F1:
