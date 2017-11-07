@@ -45,7 +45,7 @@ You should now be connected to the instance.
 
 * Open a terminal window and double click on the Chromium browser icon which will open on the github project for this Lab.  You should perform all your copy paste from within the RDP session to avoid issue.
 
-[Desktop](setupFigures/terminal.png)
+![Desktop](/setupFigures/terminal.png?raw=true)
 
 * Execute the following commands to setup the SDAccel environment and get the necessary files
 ```  
