@@ -16,21 +16,29 @@ source ./ffsetup.sh
 source /opt/Xilinx/SDx/2017.1.rte/setup.sh
 ```
 
+* Preload the HEVC encoder AFI
+```
+fpga-load-local-image -S 0 -I agfi-0015437e933b3e725
+```
 * Run the SW implementation using libx265
 ```
 ./ffmpeg -f rawvideo -pix_fmt yuv420p -s:v 1920x1080 -i /home/centos/vectors/crowd8_420_1920x1080_50.yuv -an -frames 1000 -c:v libx265 -preset medium -g 30 -q 40 -f hevc -y ./crowd8_420_1920x1080_50_libx265_out0_qp40.hevc
 ```
-> Alternatively, run 'source ./run_sw.cmd'
 
-* Note the time to encode the video using the software implementation (approx 55sec)
+The encoder will finish with message similar to this one: \
+frame=  500 fps=9.0 q=-0.0 Lsize=   19933kB time=00:00:19.92 bitrate=8197.4kbits/s speed=0.358x 
 
-* Run the F1-optimized implementation using the NGCodec HEVC encoder FPGA Image
+We can see that the software encoder processed the 500 frames at a performance of 9 frames per second (fps), taking 55.5 sec to encode the entire video.
+
+* Now run the F1-optimized implementation using the NGCodec HEVC encoder FPGA Image
 ```
 ./ffmpeg -f rawvideo -pix_fmt yuv420p -s:v 1920x1080 -i /home/centos/vectors/crowd8_420_1920x1080_50.yuv -an -frames 1000 -c:v xlnx_hevc_enc -psnr -g 30 -global_quality 40 -f hevc -y ./crowd8_420_1920x1080_50_NGcodec_out0_g30_gq40.hevc 
 ```
-> Alternatively, run 'source ./run_hw.cmd'
 
-* Note the time to encode the video using the F1 optimized implementation (approx 19sec)
+The encoder will finish with message similar to this one: \
+frame=  500 fps= 52 q=-0.0 LPSNR=Y:inf U:inf V:inf *:inf size=   17580kB time=00:00:20.00 bitrate=7200.9kbits/s speed=2.08x 
+
+The F1-optimized encoder processed the video in about 9.6 seconds at a performance of 52 fps, a 5.7x performance boost over the software implementation.
 
 * Look at the SDAccel profiling report
 ```
