@@ -97,5 +97,6 @@ TEST PASSED
 sh-4.2#
 ```
 
+We just compiled an application for F1 reusing a pre-compiled AFI (Amazon FPGA Image).
 
 This concludes the setup and hello_world test section of the Lab.
