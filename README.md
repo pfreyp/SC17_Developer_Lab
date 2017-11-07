@@ -12,7 +12,7 @@ In this initial section, you will start a pre-configured EC2 F1 instance and con
 
 AWS F1 instances are ideal to accelerate complex workloads. In this module you will experience the potential of F1 by using FFmpeg to run both a software implementation and an F1-optimized implementation of an H.265/HEVC encoder. 
 
-##### 3. Developing and optimizating F1 applications with SDAccel - The IDCT Lab
+##### 3. Developing and optimizing F1 applications with SDAccel - The IDCT Lab
 
 In this module, you will use the SDAccel development environment to create, profile and optimize an F1 accelerator. The lab focuses on the Inverse Discrete Cosine Transform (IDCT), a compute intensive function use at the heart of all video codecs.
 
