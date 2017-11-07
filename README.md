@@ -5,7 +5,7 @@ During this session you will gain hands-on experience with AWS accelerated appli
 
 Let's get started...
 
-## 1. Getting Setup
+## 1. Setup
 
 In this initial section, you will access a pre-configured EC2 F1 instance. You will "remote desktop" to that instance. You will then load the Lab design files and associated instructions. Run a basic vector addition design to confirm the system is correctly setup. 
 - [Setup Instructions](Setup.md)
