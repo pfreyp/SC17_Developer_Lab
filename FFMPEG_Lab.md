@@ -44,6 +44,10 @@ The NGCodec encoder processed the same video in about 9.6 seconds (500 frame / 5
 ```
 firefox --new-tab sdaccel_profile_summary.html
 ```
+
+---------------------------------------
+[**Start Module 3: Developing and optimizing F1 applications with SDAccel**](IDCT_Lab.md)
+
 - - -
 
 Legacy instructions here
