@@ -36,14 +36,18 @@ This should bring up a message about connection certificates.
 - Click **Yes** to proceed.
 The Remote Desktop Connection window opens with a login prompt. 
 - Log in with the following credentials:
-   - User: **user name from the email message**
+   - User: **centos**
    - Password: **xilinx_sc17**
 - Click **Ok**
 You should now be connected to the instance.
 
 ## Configure the Xilinx SDAccel environment and load the workshop files
 
-* Open a terminal window, execute the following commands to setup the SDAccel environment and get the necessary files
+* Open a terminal window and double click on the Chromium browser icon which will open on the github project for this Lab.  You should perform all your copy paste from within the RDP session to avoid issue.
+
+
+
+* Execute the following commands to setup the SDAccel environment and get the necessary files
 ```  
 cd /home/centos
 git clone https://github.com/Xilinx/SC17_Developer_Lab.git
