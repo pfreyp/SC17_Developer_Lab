@@ -34,12 +34,10 @@ You will use that IP address for the next step.
 The instance just started is preconfigured with remote desktop protocol (RDP) services.
 - From your local machine, start a remote desktop protocol client
    - On Windows: press the Windows key and type "remote desktop".  You should see the "Remote Desktop Connection" show in the list of programs.  (Alternatively you could also directly invoke mstsc.exe)
-   
-   ![Remote](/setupFigures/remote.png?raw=true)
-   
+  
    - On Linux: any RDP client such a Remmina or Vinagre are suitable
    - On macOS: Microsoft Remote Desktop from the Mac App Store
-- In the RDP client, enter the **public IP address** you obtained from the EC2 console page into the 'Computer' text entry field of the client
+- In the RDP client, enter the **public IP address**
 - Click **Connect**
 This should bring up a message about connection certificates. 
 - Click **Yes** to proceed.
@@ -47,6 +45,9 @@ The Remote Desktop Connection window opens with a login prompt.
 - Log in with the following credentials:
    - User: **centos**
    - Password: **xilinx_sc17**
+   
+    ![Remote](/setupFigures/remote.png?raw=true)
+   
 - Click **Ok**
 You should now be connected to the instance.
 
