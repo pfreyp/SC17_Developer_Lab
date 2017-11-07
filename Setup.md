@@ -61,7 +61,7 @@ You should now be connected to the instance.
 
 ![Keyring](/setupFigures/keyring1.png?raw=true)
 
-* In a **shell**, execute the following commands to setup the SDAccel environment and get the necessary files
+* In a **shell**, execute the following commands to setup the SDAccel environment and get the necessary files (copy-paste the whole block of commands below in the shell if you'd like)
 ```  
 cd /home/centos
 git clone https://github.com/Xilinx/SC17_Developer_Lab.git
