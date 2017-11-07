@@ -76,7 +76,7 @@ source $XILINX_SDX/settings64.sh
 * The hello world example is a vector addition OpenCL example for which we will compile the host code associated to a pre-compiled xclbin file.
 ```
 cd /home/centos/SC17_Developer_Lab/helloworld_ocl
-make check TARGETS=hw_emu DEVICES=$AWS_PLATFORM all
+make TARGETS=hw DEVICES=$AWS_PLATFORM exe
 sudo sh
 source /opt/Xilinx/SDx/2017.1.rte/setup.sh
 ./helloworld
