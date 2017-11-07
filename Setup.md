@@ -18,11 +18,11 @@ If you have not received that email, please contact a staff member at the beginn
 - Click **"Sign In"**.
 
 You should see one stopped EC2 F1 instance.
-Start the instance (click on the "actions" pulldown button and select "start").
+- Start the instance by choosing the **Ations** button, then select **Instance State** and then **Start**).
 
 ![Start](/setupFigures/start1.png?raw=true)
 
-Allow some time for the instance to start and hit **refresh** if needed.
+Allow some time for the instance to start. If needed, click the **Refresh** icon to update the instance status information.
 
 ![Refresh](/setupFigures/refresh.png?raw=true)
 
@@ -118,4 +118,6 @@ We just compiled and executed an F1 application reusing a pre-registered AFI (Am
 
 This concludes the setup and hello_world execution section of the Lab.
 
-[Back to main README...](README.md)
+---------------------------------------
+[**Start Module 2: Experiencing F1 acceleration**](FFMEG_Lab.md)
+
