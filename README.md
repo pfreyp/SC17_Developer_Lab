@@ -12,7 +12,7 @@ In this initial section, you will access an F1 instance through "remote desktop"
 
 ## 2. The IDCT Lab
 
-The Discrete Cosine Transform (DCT) and its inverse (IDCT) transform time domain signals or images into a spatial domain. This  transformation allows very efficient compression algorithms used in most video codec.
+The Discrete Cosine Transform (DCT) and its inverse (IDCT) transform time domain signals or images into spectral data. This  transformation allows very efficient compression algorithms used in most video codec.
 - [Lab Instructions](IDCT_Lab.md)
 
 ## 3. The FFMPEG Lab
