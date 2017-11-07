@@ -119,5 +119,5 @@ We just compiled and executed an F1 application reusing a pre-registered AFI (Am
 This concludes the setup and hello_world execution section of the Lab.
 
 ---------------------------------------
-[**Start Module 2: Experiencing F1 acceleration**](FFMEG_Lab.md)
+[**Start Module 2: Experiencing F1 acceleration**](FFMPEG_Lab.md)
 
