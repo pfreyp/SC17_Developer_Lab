@@ -1,1 +1,0 @@
-config_array_partition -auto_partition_threshold 0 -auto_promotion_threshold 0 
