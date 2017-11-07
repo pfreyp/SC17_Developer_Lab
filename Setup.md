@@ -1,4 +1,4 @@
-# Lab Setup - SC17
+# Connecting to your F1 instance
 
 In this section, you will setup our instance, connect to it and download the Lab files and instructions.
 
@@ -18,11 +18,11 @@ If you have not received that email, please contact a staff member at the beginn
 - Click **"Sign In"**.
 
 You should see one stopped EC2 F1 instance.
-Start the instance (click on the "actions" pulldown button and select "start").
+- Start the instance by choosing the **Ations** button, then select **Instance State** and then **Start**).
 
 ![Start](/setupFigures/start1.png?raw=true)
 
-Allow some time for the instance to start and hit **refresh** if needed.
+Allow some time for the instance to start. If needed, click the **Refresh** icon to update the instance status information.
 
 ![Refresh](/setupFigures/refresh.png?raw=true)
 
@@ -44,7 +44,7 @@ This should bring up a message about connection certificates.
 The Remote Desktop Connection window opens with a login prompt. 
 - Log in with the following credentials:
    - User: **centos**
-   - Password: **????????**
+   - Password: *communicated by event staff*
    
     ![Remote](/setupFigures/remote.png?raw=true)
    
@@ -76,7 +76,7 @@ source $XILINX_SDX/settings64.sh
 * The hello world example is a vector addition OpenCL example for which we will compile the host code associated to a pre-compiled xclbin file.
 ```
 cd /home/centos/SC17_Developer_Lab/helloworld_ocl
-make check TARGETS=hw_emu DEVICES=$AWS_PLATFORM all
+make TARGETS=hw DEVICES=$AWS_PLATFORM exe
 sudo sh
 source /opt/Xilinx/SDx/2017.1.rte/setup.sh
 ./helloworld
@@ -118,4 +118,6 @@ We just compiled and executed an F1 application reusing a pre-registered AFI (Am
 
 This concludes the setup and hello_world execution section of the Lab.
 
-[Back to main README...](README.md)
+---------------------------------------
+[**Start Module 2: Experiencing F1 acceleration**](FFMPEG_Lab.md)
+

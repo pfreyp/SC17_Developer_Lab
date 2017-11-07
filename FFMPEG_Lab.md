@@ -1,5 +1,46 @@
 
-# FFMPEG lab on AWS-F1
+# FFMPEG Lab
+
+Basic instructions for now. Story will follow later...
+
+* Open a new terminal
+* Navigate to the FFmpeg lab directory
+```
+cd ~/SC17_Developer_Lab/ffmpeg
+```
+
+* Source the environment
+```
+sudo sh
+source ./ffsetup.sh
+source /opt/Xilinx/SDx/2017.1.rte/setup.sh
+```
+
+* Run the SW implementation using libx265
+```
+./ffmpeg -f rawvideo -pix_fmt yuv420p -s:v 1920x1080 -i /home/centos/vectors/crowd8_420_1920x1080_50.yuv -an -frames 1000 -c:v libx265 -preset medium -g 30 -q 40 -f hevc -y ./crowd8_420_1920x1080_50_libx265_out0_qp40.hevc
+```
+> Alternatively, run 'source ./run_sw.cmd'
+
+* Note the time to encode the video using the software implementation (approx 55sec)
+
+* Run the F1-optimized implementation using the NGCodec HEVC encoder FPGA Image
+```
+./ffmpeg -f rawvideo -pix_fmt yuv420p -s:v 1920x1080 -i /home/centos/vectors/crowd8_420_1920x1080_50.yuv -an -frames 1000 -c:v xlnx_hevc_enc -psnr -g 30 -global_quality 40 -f hevc -y ./crowd8_420_1920x1080_50_NGcodec_out0_g30_gq40.hevc 
+```
+> Alternatively, run 'source ./run_hw.cmd'
+
+* Note the time to encode the video using the F1 optimized implementation (approx 19sec)
+
+* Look at the SDAccel profiling report
+```
+firefox --new-tab sdaccel_profile_summary.html
+```
+- - -
+
+Legacy instructions here
+
+
 
 ## Contents
 1. [Introduction](#Introduction)
