@@ -1,6 +1,6 @@
 # Lab Setup - SC17
 
-In this section of the Lab, we will be setting up our instance and validating the flow with a simple example.
+In this section, we will setup our instance, connect to it and download the Lab files and instructions.
 
 ## Start a preconfigured EC2 F1 instance
 
@@ -13,9 +13,9 @@ If you have not received that email, please contact a staff member at the beginn
 ```
 - Retrieve and navigate to that URL, it points to the AWS EC2 console management page.
 - Enter the Account ID communicated by the staff.
-- Click "Next"
+- Click "Next".
 - Enter the IAM user name received in the email mentioned above and the password.
-- Click "Sign In"
+- Click "Sign In".
 
 You should see one stopped EC2 F1 instance.
 Start the instance (click on the "actions" pulldown button and select "start").
@@ -43,100 +43,15 @@ You should now be connected to the instance.
 
 ## Configure the Xilinx SDAccel environment and load the workshop files
 
-* Open a terminal window, execute the following commands to setup the SDAccel environment (AWS_FPGA_REPO_DIR and XILINX_SDX are predefined)
+* Open a terminal window, execute the following commands to setup the SDAccel environment and get the necessary files
 ```  
-cd $AWS_FPGA_REPO_DIR                                         
+cd /home/centos
+git clone https://github.com/Xilinx/SC17_Developer_Lab.git
+git clone https://github.com/aws/aws-fpga.git
+export AWS_FPGA_REPO_DIR=/home/centos/aws-fpga
+cd $AWS_FPGA_REPO_DIR
 source sdaccel_setup.sh
 source $XILINX_SDX/settings64.sh 
 ```
 
-* Get the SC17 developer lab Github repository to copy the necessary files
-```
-cd /home/centos
-git clone https://github.com/Xilinx/SC17_Developer_Lab
-```
-
-## Run a test application
-
-The SDAccel emulation flows allows testing, profiling and debugging the application before deploying on F1. 
-
-* Navigate to the 'helloworld_ocl' example directory
-```
-cd /home/centos/helloworld_ocl/
-```
-
-* Run the SW Emulation flow
-
-```
-make clean
-make check TARGETS=sw_emu DEVICES=$AWS_PLATFORM all
-```
-
-* Run the HW Emulation flow
-
-```
-make clean
-make check TARGETS=hw_emu DEVICES=$AWS_PLATFORM all
-```
-
-### Deploy the host application on F1
-
-To deploy and execute on F1 you need the host application (helloworld) and the AWS FPGA binary (vector_addition.hw.xilinx_aws-vu9p-f1_4ddr-xpr-2pr_4_0.awsxclbin).
-
-The *.awsxclbin is read by the host application to determine which Amazon FPGA Image (AFI) should be loaded in the FPGA.
-
-Since the creation of the .awsxclbin file and AFI are not instantaneous, they have been pre-generated to streamline this workshop.
-
-* Confirm that the AFI is ready to be used
-```
-aws ec2 describe-fpga-images --fpga-image-ids <AFI ID>
-```
-* Check that the output log of the previous command contains:
-```
-...
-"State": {
-    "Code": "available"
- },
-...
-```
-
-* Execute the host application on F1:
-```
-cd ..
-sudo sh
-source /opt/Xilinx/SDx/2017.1.rte/setup.sh   
-./helloworld 
-```
-
-* The example application will display the following messages:
-
-```
-Device/Slot[0] (/dev/xdma0, 0:0:1d.0)
-xclProbe found 1 FPGA slots with XDMA driver running
-platform Name: Xilinx
-Vendor Name : Xilinx
-Found Platform
-Found Device=xilinx:aws-vu9p-f1:4ddr-xpr-2pr:4.0
-XCLBIN File Name: vector_addition
-INFO: Importing ./vector_addition.hw.xilinx_aws-vu9p-f1_4ddr-xpr-2pr_4_0.awsxclbin
-Loading: './vector_addition.hw.xilinx_aws-vu9p-f1_4ddr-xpr-2pr_4_0.awsxclbin'
-Result =
-42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
-42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
-42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
-42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
-42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
-42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
-42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
-42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
-42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
-42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
-42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
-42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
-42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
-42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
-42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
-42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
-TEST PASSED
-sh-4.2#
-```
+This concludes the setup section of the Lab.
