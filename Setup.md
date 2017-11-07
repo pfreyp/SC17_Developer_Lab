@@ -54,4 +54,48 @@ source sdaccel_setup.sh
 source $XILINX_SDX/settings64.sh 
 ```
 
-This concludes the setup section of the Lab.
+## Running the hello_world example to check the F1 instance
+
+* The hello world exampe is a vector addition OpenCL example for which we will compile the host code which connects to a kernel that's already compiled.
+```
+cd /home/centos/SC17_Developer_Lab/helloworld_ocl
+make check TARGETS=hw_emu DEVICES=$AWS_PLATFORM all
+sudo sh
+source /opt/Xilinx/SDx/2017.1.rte/setup.sh
+./helloworld
+```
+
+* The output on the screen should look like this:
+```
+Device/Slot[0] (/dev/xdma0, 0:0:1d.0)
+xclProbe found 1 FPGA slots with XDMA driver running
+platform Name: Xilinx
+Vendor Name : Xilinx
+Found Platform
+Found Device=xilinx:aws-vu9p-f1:4ddr-xpr-2pr:4.0
+XCLBIN File Name: vector_addition
+INFO: Importing ./vector_addition.hw.xilinx_aws-vu9p-f1_4ddr-xpr-2pr_4_0.awsxclbin
+Loading: './vector_addition.hw.xilinx_aws-vu9p-f1_4ddr-xpr-2pr_4_0.awsxclbin'
+Result =
+42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
+42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
+42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
+42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
+42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
+42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
+42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
+42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
+42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
+42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
+42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
+42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
+42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
+42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
+42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
+42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
+TEST PASSED
+sh-4.2#
+```
+
+
+This concludes the setup and hello_world test section of the Lab.
