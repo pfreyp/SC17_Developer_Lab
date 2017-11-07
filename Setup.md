@@ -13,16 +13,16 @@ If you have not received that email, please contact a staff member at the beginn
 ```
 - Retrieve and navigate to that URL, it points to the AWS EC2 console management page.
 - Enter the **Account ID** communicated by the staff.
-- Click **"Next"**.
+- Click **Next**.
 - Enter the IAM **user** name received in the email mentioned above and the password communicated by the staff.
-- Click **"Sign In"**.
+- Click **Sign In**.
 
 You should see one stopped EC2 F1 instance.
-- Start the instance by choosing the **Ations** button, then select **Instance State** and then **Start**).
+- Start the instance by choosing the **Actions** button, then select **Instance State** and then **Start**.
 
 ![Start](/setupFigures/start1.png?raw=true)
 
-Allow some time for the instance to start. If needed, click the **Refresh** icon to update the instance status information.
+Allow some time for the instance to start. If needed, click the **Refresh** icon in the top-right corner of the EC2 dashboard to update the instance status information.
 
 ![Refresh](/setupFigures/refresh.png?raw=true)
 
@@ -57,7 +57,7 @@ You should now be connected to the instance.
 
 ![Desktop](/setupFigures/terminal.png?raw=true)
 
-* Click **"Cancel"** (maybe more than once :-) ) on the keyring popup window you might see...
+* Click **Cancel** (maybe more than once :-) ) on the keyring popup window you might see...
 
 ![Keyring](/setupFigures/keyring1.png?raw=true)
 
