@@ -44,7 +44,7 @@ This should bring up a message about connection certificates.
 The Remote Desktop Connection window opens with a login prompt. 
 - Log in with the following credentials:
    - User: **centos**
-   - Password: **xilinx_sc17**
+   - Password: **????????**
    
     ![Remote](/setupFigures/remote.png?raw=true)
    
