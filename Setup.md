@@ -22,7 +22,7 @@ Start the instance (click on the "actions" pulldown button and select "start").
 
 ![Start](/setupFigures/start1.png?raw=true)
 
-Allow some time for the instance to start and hit refresh if needed.
+Allow some time for the instance to start and hit **refresh** if needed.
 
 ![Refresh](/setupFigures/refresh.png?raw=true)
 
@@ -57,11 +57,11 @@ You should now be connected to the instance.
 
 ![Desktop](/setupFigures/terminal.png?raw=true)
 
-* Click "Cancel" (more than once :-) ) on the keyring popup window you might see
+* Click **"Cancel"** (maybe more than once :-) ) on the keyring popup window you might see...
 
 ![Keyring](/setupFigures/keyring1.png?raw=true)
 
-* Execute the following commands to setup the SDAccel environment and get the necessary files
+* In a **shell**, execute the following commands to setup the SDAccel environment and get the necessary files
 ```  
 cd /home/centos
 git clone https://github.com/Xilinx/SC17_Developer_Lab.git
