@@ -4,18 +4,18 @@ In this section, you will setup our instance, connect to it and download the Lab
 
 ## Start a preconfigured EC2 F1 instance
 
-For this event, each participant has been attributed an EC2 F1 instance, a user name and password.
+For this event, each participant has been attributed an EC2 F1 instance, and login credentials.
 
-The user name and password were communicated through an email message sent a couple of days before the event.
-The message contains a URL that will help you access an EC2 F1 instance.
+The user name ("user" followed by a number) was communicated through email a couple of days before the event.
+The message contains a URL that will help access an EC2 F1 instance.
 ```
 If you have not received that email, please contact a staff member at the beginning of the lab session.
 ```
 - Retrieve and navigate to that URL, it points to the AWS EC2 console management page.
 - Enter the **Account ID** communicated by the staff.
-- Click "Next".
-- Enter the IAM user name received in the email mentioned above and the password.
-- Click "Sign In".
+- Click **"Next"**.
+- Enter the IAM **user** name received in the email mentioned above and the password communicated by the staff.
+- Click **"Sign In"**.
 
 You should see one stopped EC2 F1 instance.
 Start the instance (click on the "actions" pulldown button and select "start").
