@@ -7,7 +7,7 @@ Let's get started...
 
 ## 1. Setup
 
-In this initial section, you will access a pre-configured EC2 F1 instance. You will "remote desktop" to that instance. You will then load the Lab design files and associated instructions. Run a basic vector addition design to confirm the system is correctly setup. 
+In this initial section, you will access an F1 instance through "remote desktop", load lab design files and access the instructions. Finally you will run your first accelerated vector addition design to confirm the system is setup as expected. 
 - [Setup Instructions](Setup.md)
 
 ## 2. The IDCT Lab
