@@ -110,6 +110,7 @@ TEST PASSED
 sh-4.2#
 ```
 
-So we just compiled and executed an F1 application reusing a pre-compiled AFI (Amazon FPGA Image).
+We just compiled and executed an F1 application reusing a pre-registered AFI (Amazon FPGA Image).
 
 This concludes the setup and hello_world execution section of the Lab.
+[BACK to main README](README.md)
