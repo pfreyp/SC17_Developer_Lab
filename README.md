@@ -7,22 +7,15 @@ Let's get started...
 
 ## 1. Getting Setup
 
-In this initial section, you will access a pre-configured EC2 F1 instance. You will "remote desktop" to that instance. You will then load the Lab design files and associated instructions.
+In this initial section, you will access a pre-configured EC2 F1 instance. You will "remote desktop" to that instance. You will then load the Lab design files and associated instructions. Run a basic vector addition design to confirm the system is correctly setup. 
 - [Setting up the session](Setup.md).
 
-## 2. The "hello world" Vector Addition Lab
-
-Running a basic vector addition example showcases the main phases of verification with both software and hardware emulation.
-Finally running the example's kernel on the actual hardware to confirm the output matches the emulation results.
-Please note that in order to save time, the AFI (Amazon FPGA Image) was created in advance. 
-- Link to the [Hello World Lab Instructions](Hello_World_Lab.md)
-
-## 3. The IDCT Lab
+## 2. The IDCT Lab
 
 The Discrete Cosine Transform (DCT) and its inverse (IDCT) transform time domain signals or images into a spatial domain. This  transformation allows very efficient compression algorithms used in most video codec.
 - Please follow the [IDCT Lab Instructions](IDCT_Lab.md)
 
-## 4. The FFMPEG Lab
+## 3. The FFMPEG Lab
 
 The FFMPEG framework provides the infrastructure and implementation to effectively work with a wide variety of codecs. This framework is introduced in this tutorial and it is shown how to effectively integrate hardware accelerated algorithms.
 - Please refer to the [FFMPEG Lab Instructions](FFMPEG_Lab.md) to proceed.
