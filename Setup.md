@@ -51,7 +51,6 @@ You should now be connected to the instance.
 ```  
 cd /home/centos
 git clone https://github.com/Xilinx/SC17_Developer_Lab.git
-git clone https://github.com/aws/aws-fpga.git
 export AWS_FPGA_REPO_DIR=/home/centos/aws-fpga
 cd $AWS_FPGA_REPO_DIR
 source sdaccel_setup.sh
@@ -60,7 +59,7 @@ source $XILINX_SDX/settings64.sh
 
 ## Running the hello_world example to check the F1 instance
 
-* The hello world exampe is a vector addition OpenCL example for which we will compile the host code which connects to a kernel that's already compiled.
+* The hello world example is a vector addition OpenCL example for which we will compile the host code associated to a pre-compiled xclbin file.
 ```
 cd /home/centos/SC17_Developer_Lab/helloworld_ocl
 make check TARGETS=hw_emu DEVICES=$AWS_PLATFORM all
@@ -69,7 +68,7 @@ source /opt/Xilinx/SDx/2017.1.rte/setup.sh
 ./helloworld
 ```
 
-* The output on the screen should look like this:
+* A succesful outcome would look like the following:
 ```
 Device/Slot[0] (/dev/xdma0, 0:0:1d.0)
 xclProbe found 1 FPGA slots with XDMA driver running
@@ -101,6 +100,6 @@ TEST PASSED
 sh-4.2#
 ```
 
-We just compiled an application for F1 reusing a pre-compiled AFI (Amazon FPGA Image).
+So we just compiled and executed an F1 application reusing a pre-compiled AFI (Amazon FPGA Image).
 
-This concludes the setup and hello_world test section of the Lab.
+This concludes the setup and hello_world execution section of the Lab.
