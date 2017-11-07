@@ -59,7 +59,7 @@ You should now be connected to the instance.
 
 * Click "Cancel" (more than once :-) ) on the keyring popup window you might see
 
-![Keyring](/setupFigures/keyring.png?raw=true)
+![Keyring](/setupFigures/keyring1.png?raw=true)
 
 * Execute the following commands to setup the SDAccel environment and get the necessary files
 ```  
