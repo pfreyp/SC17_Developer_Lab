@@ -57,6 +57,10 @@ You should now be connected to the instance.
 
 ![Desktop](/setupFigures/terminal.png?raw=true)
 
+* Click "Cancel" (more than once :-) ) on the keyring popup window you might see
+
+![Keyring](/setupFigures/keyring.png?raw=true)
+
 * Execute the following commands to setup the SDAccel environment and get the necessary files
 ```  
 cd /home/centos
