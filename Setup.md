@@ -43,7 +43,7 @@ You should now be connected to the instance.
 
 ## Configure the Xilinx SDAccel environment and load the workshop files
 
-* Open a terminal window and double click on the Chromium browser icon which will open on the github project for this Lab.  You should perform all your copy paste from within the RDP session to avoid issue.
+* Open a terminal window and double click on the Chromium browser icon which will open on the github project for this Lab.  We suggest you **perform all your copy paste from instructions to shell within the RDP session** to avoid issues.
 
 ![Desktop](/setupFigures/terminal.png?raw=true)
 
