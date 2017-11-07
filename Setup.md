@@ -20,7 +20,7 @@ If you have not received that email, please contact a staff member at the beginn
 You should see one stopped EC2 F1 instance.
 Start the instance (click on the "actions" pulldown button and select "start").
 
-![Start](/setupFigures/start.png?raw=true)
+<img src="start.png" alt="Start" style="width: 400px;"/>
 
 Allow some time for the instance to start and hit refresh if needed.
 
