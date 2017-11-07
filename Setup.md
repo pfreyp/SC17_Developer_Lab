@@ -1,4 +1,4 @@
-# Lab Setup - SC17
+# Connecting to your F1 instance
 
 In this section, you will setup our instance, connect to it and download the Lab files and instructions.
 
