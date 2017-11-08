@@ -46,13 +46,13 @@ fpga-load-local-image -S 0 -I agfi-0015437e933b3e725
 The encoder will finish with a message similar to this one: \
 *frame=500 fps= 52 q=-0.0 LPSNR=Y:inf U:inf V:inf \*:inf size=17580kB time=00:00:20.00 bitrate=7200.9kbits/s speed=2.08x* 
 
-The NGCodec encoder processed the same video in about **9.6 seconds** (500 frame / 52 fps), a **5.7x** performance boost over the libx265 implementation.
+The HEVC encoder running on F1 processed the same video in about **9.6 seconds** (500 frame / 52 fps), a **5.7x** performance boost over the libx265 implementation.
 
 * Compare the file sizes of the two encoded videos
 ```
 ls -la --block-size=K *hevc
 ```
-Notice that the not only the HEVC encoder running on F1 was faster, but is also produced a denser ouput (17.5Mb vs 19.9Mb). Now let's compare picture quality.
+Notice that the HEVC encoder running on F1 produced a denser ouput: **17.5Mb** vs **19.9Mb**.
 
 * Open and watch the videos using ```smplayer```. Note: rendering over RDP will not be ideal, but you will nonetheless be able to compare the two encoded videos.
 ```
@@ -62,16 +62,16 @@ smplayer ./crowd8_420_1920x1080_50_libx265_out0_qp40.hevc
 # Output from the NGCodec encoder
 smplayer ./crowd8_420_1920x1080_50_NGcodec_out0_g30_gq40.hevc 
 ```
-You will notice that the picture quality is similar for both encoders. The HEVC encoder running on F1 is not only much faster, but it also provides better compression without sacrificing quality.
+Notice that the picture quality is similar for both encoders. The HEVC encoder running on F1 is not only much faster, but it also provides better compression without sacrificing quality.
 
-Finally, you will notice that two profile summary files were generated when running the HEVC encoder on F1. These are performance reports in both html and csv formats which can be help profile the performance of tha application running on F1.
+Finally, you will notice that two profile summary files were generated when running the HEVC encoder on F1. These are performance reports in both html and csv formats which help profile the performance of the application running on F1.
 
 * Open the SDAccel HTML profile summary in a web browser.
 ```
 firefox --new-tab sdaccel_profile_summary.html &
 ```
-* At the top of the report, you find a summary of all the OpenCL calls made by the custom ffmpeg plugin to the FPGA accelerator. On the 3rd row, notice how **clEnqueueNDRangeKernel** is executed 500 times, one per video frame. 
-* Scroll down to the second section called **Kernel Execution**. Notice how the total execution time for the NGCodec kernel is about 8.9 seconds and how the average processing time per frame is about 17.9 milliseconds.
+* At the top of the report, you will find a summary of all the **OpenCL API Calls** made by the custom ffmpeg plugin to the FPGA accelerator. On the 3rd row, notice how **clEnqueueNDRangeKernel** is executed 500 times, once per video frame. 
+* Scroll down to the next table called **Kernel Execution**. Notice how the total execution time for the NGCodec kernel is about 8.9 seconds, which closely matches the 9.6 second of total ffmpeg processing time. Note also how the average processing time about 17.9 milliseconds per frame.
 * The SDAccel reports will be discussed in more details in the next lab.
 * Close Firefox and exit the shell to finish this lab.
 
