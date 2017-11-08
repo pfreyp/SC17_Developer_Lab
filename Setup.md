@@ -51,7 +51,7 @@ You should now be connected to the instance.
 ## Configure the Xilinx SDAccel environment and load the workshop files
 
 * Open a terminal window
-* Double click on the Chromium browser icon, it open to the Lab instructions (if a "keyring" popup comes up, click Cancel).  We suggest you **perform all your copy-paste from instructions to shell within the RDP session** to avoid issues.
+* Double click on the Chromium browser icon, it opens to the Lab instructions (if a "keyring" popup comes up, click **Cancel**).  We suggest you **perform all your copy-paste from instructions to shell within the RDP session** to avoid issues.
 
 * In a **shell**, execute the following commands to setup the SDAccel environment and get the necessary files (copy-paste the whole block of commands below in the shell if you'd like)
 ```  
