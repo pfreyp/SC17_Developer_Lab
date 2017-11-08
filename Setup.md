@@ -22,8 +22,7 @@ You should see one stopped EC2 F1 instance.
 
 ![Start](/setupFigures/start1.png?raw=true)
 
-Allow some time for the instance to start. If needed, click the **Refresh** icon in the top-right corner of the EC2 dashboard to update the instance status information.
-![Refresh](/setupFigures/refresh1.png?raw=true)
+Allow some time for the instance to start. If needed, click the **Refresh** icon (![Refresh](/setupFigures/refresh1.png?raw=true)) in the top-right corner of the EC2 dashboard to update the instance status information.
 
 Once the instance is running, the EC2 console gives you information relative to the **public IP address** of the instance.
 You will use that IP address for the next step.
