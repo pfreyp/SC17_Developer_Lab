@@ -43,7 +43,7 @@ The Remote Desktop Connection window opens with a login prompt.
    - User: **centos**
    - Password: **xilinx_sc17**
    
-    ![Remote](/setupFigures/remote.png?raw=true)
+    ![Remote](/setupFigures/remote1.png?raw=true)
    
 - Click **Ok**
 You should now be connected to the instance.
