@@ -59,7 +59,7 @@ smplayer ./crowd8_420_1920x1080_50_NGcodec_out0_g30_gq40.hevc
 
 * Look at the SDAccel profiling report.
 ```
-firefox --new-tab sdaccel_profile_summary.html
+firefox --new-tab sdaccel_profile_summary.html &
 ```
 
 ## Conclusion
