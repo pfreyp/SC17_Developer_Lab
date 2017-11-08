@@ -7,7 +7,7 @@ In this section, you will setup our instance, connect to it and download the Lab
 For this event, each participant has been attributed an EC2 F1 instance, and login credentials.
 
 The user name ("user" followed by a number) was communicated through email a couple of days before the event.
-The message contains a URL that will help access an EC2 F1 instance.
+The message contains a URL to access an EC2 F1 instance.
 ```
 If you have not received that email, please contact a staff member at the beginning of the lab session.
 ```
@@ -30,7 +30,7 @@ Once the instance is running, the EC2 console gives you information relative to 
 
 The instance just started is preconfigured with remote desktop protocol (RDP) services.
 - From your local machine, start a remote desktop protocol client
-   - On Windows: press the Windows key and type "remote desktop".  You should see the "Remote Desktop Connection" show in the list of programs.  Alternatively you could also directly invoke mstsc.exe.
+   - On Windows: press the Windows key and type "remote desktop".  You should see the "Remote Desktop Connection" show in the list of programs.  Alternatively you could also directly invoke mstsc.exe. Set your remote desktop client to use 24-bit for color depth (Option->Display tab).
   
    - On Linux: any RDP client such a Remmina or Vinagre are suitable
    - On macOS: Microsoft Remote Desktop from the Mac App Store
