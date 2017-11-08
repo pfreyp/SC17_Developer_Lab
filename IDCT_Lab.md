@@ -261,10 +261,11 @@ The registration process creates also a secure xclbin handle "binary_container_1
 ``` shell
 sudo sh
 source /opt/Xilinx/SDx/2017.1.rte/setup.sh
-/home/centos/SC17_Developer_Lab/workspace/IDCT/Emulation-HW/IDCT.exe /home/centos/SC17_Developer_Lab/idct/xclbin/binary_container_1.awsxclbin
+cp /home/centos/SC17_Developer_Lab/workspace/IDCT/Emulation-HW/IDCT.exe .
+./IDCT.exe /home/centos/SC17_Developer_Lab/idct/xclbin/binary_container_1.awsxclbin
 ```
 
-
+Please note, the performance differences between the CPU run and the FPGA accelerated implementation.
 
 <a name="Conclusion"></a>
 ## Conclusion  
