@@ -39,7 +39,7 @@ The instance just started is preconfigured with remote desktop protocol (RDP) se
 This should bring up a message about connection certificates. 
 - Click **Yes** to proceed.
 The Remote Desktop Connection window opens with a login prompt. 
-- Log in with the following credentials:
+- **Login** with the following credentials:
    - User: **centos**
    - Password: **xilinx_sc17**
    
