@@ -3,7 +3,6 @@
 
 ## Contents
 1. [Introduction](#Introduction)
-1. [Prerequisites](#Prerequisites)
 1. [Environment Configuration and Workspace Setup](#Setup)
 1. [OpenCL Host Initialization](#Init)
 1. [Run Emulations](#Emulation)
@@ -20,18 +19,6 @@ This tutorial is designed to help teach the basics of the SDAccel development pr
 The design is a Inverse Discrete Cosine Transform, which is used heavily in audio/image processing and is based off of the Fourier Transform. Please refer to the Wikipedia article  [Discrete Cosine Transform](https://en.wikipedia.org/wiki/Discrete_cosine_transform) for more information. 
 
  
-<a name="Prerequisites"></a>
-## Prerequisites
-
-This example assumes:
-*   The aws-fpga git is cloned into directory ~/aws-fpga
-
-*   Similarly the SC17_Developer_Lab git repository is cloned to ~/SC17_Developer_Lab
-
-    If any of these directories are different in your setup, please replace any reference in the tutorial to point to your installation directories. 
-
-*   You are logged into your AWS-F1 instance and viewing the graphical desktop environment. The following steps assumes as a starting point an active terminal on the graphical desktop running the default “bash”-shell
-
 <a name="Setup"></a>
 ## Environment Configuration and Workspace Setup
 Before the SDAccel tool suite can be started, the environment needs to be configured. Follow these steps:
@@ -55,17 +42,17 @@ Before the SDAccel tool suite can be started, the environment needs to be config
     Click **OK** to confirm the selection.  
 	
 	The provided workspace:
-	a. Opens a new empty project with the name **IDCT**
-	a. Selects the AWS platform as target platform from the aws-fpga platform directory 
-	a. Adds the host (**idct.cpp**) and kernel (**krnl_idct.cpp**) source files to the project
-	a. Defines the name of the xclbin container **binary_container_1**
-	a. Defines the **krnl_idct** function to be the top hardware function to be included in the xclbin container
-    a. Maps the ports of the **krnl_idct** function to utilize two different DDR memories; one for reads and one for writes. 
-	a. Adds the xclbin container to be the first argument provided to the executable.
+	* Opens a new empty project with the name **IDCT**
+	* Selects the AWS platform as target platform from the aws-fpga platform directory 
+	* Adds the host (**idct.cpp**) and kernel (**krnl_idct.cpp**) source files to the project
+	* Defines the name of the xclbin container **binary_container_1**
+	* Defines the **krnl_idct** function to be the top hardware function to be included in the xclbin container
+    * Maps the ports of the **krnl_idct** function to utilize two different DDR memories; one for reads and one for writes. 
+	* Adds the xclbin container to be the first argument provided to the executable.
 
-	Most of this information is displayed on the **SDX Project Settings** window or can be located in the **Project -&gt; Properties** configuration tabs.
+	Most of this information is displayed on the **SDX Project Settings** window or can be located in the **Project -&gt; Properties** configuration tabs.  
  
-![](./idctFigures/SDxWindows.PNG)
+    ![](./idctFigures/SDxWindows.PNG)
 
 1. TheSDx Project Settings window is prominently displayed in the center of the GUI. It states the project name, the selected platform (**AWS-VU9-F1**) and the xclbin container (**binary_container_1**) with the top level kernel function (**krnl_idct**). __
 The following is a brief description of the different sections of the default GUI elements (see above for reference):
@@ -214,8 +201,7 @@ In the previous section you familiarized with the SDAccel Performance Analysis c
 
     ![](./idctFigures/EndProfileSummary.PNG)
 
-From these reports, we can note down the expected kernel performance numbers and compare them to the original numbers
-
+From these reports, we can note down the expected kernel performance numbers and compare them to the original numbers.__
     - Kernel Total Time (ms):
     - Latency (min/max):
     - Interval (min/max):
