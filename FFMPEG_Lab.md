@@ -48,7 +48,13 @@ The encoder will finish with a message similar to this one: \
 
 The NGCodec encoder processed the same video in about **9.6 seconds** (500 frame / 52 fps), a **5.7x** performance boost over the libx265 implementation.
 
-* You can open and watch the videos using ```smplayer```. Note: rendering over RDP will not be good, but you will nonetheless be able to compare the two encoded videos.
+* Compare the file sizes of the two encoded videos
+```
+ls -la --block-size=K *hevc
+```
+Notice that the not only the HEVC encoder running on F1 was faster, but is also produced a denser ouput (17.5Mb vs 19.9Mb). Now let's compare picture quality.
+
+* Open and watch the videos using ```smplayer```. Note: rendering over RDP will not be ideal, but you will nonetheless be able to compare the two encoded videos.
 ```
 # Output from the libx265 encoder
 smplayer ./crowd8_420_1920x1080_50_libx265_out0_qp40.hevc
@@ -56,11 +62,18 @@ smplayer ./crowd8_420_1920x1080_50_libx265_out0_qp40.hevc
 # Output from the NGCodec encoder
 smplayer ./crowd8_420_1920x1080_50_NGcodec_out0_g30_gq40.hevc 
 ```
+You will notice that the picture quality is similar for both encoders. The HEVC encoder running on F1 is not only much faster, but it also provides better compression without sacrificing quality.
 
-* Look at the SDAccel profiling report.
+Finally, you will notice that two profile summary files were generated when running the HEVC encoder on F1. These are performance reports in both html and csv formats which can be help profile the performance of tha application running on F1.
+
+* Open the SDAccel html profiling report.
 ```
 firefox --new-tab sdaccel_profile_summary.html &
 ```
+* At the top of the report, you find a summary of all the OpenCL calls made by the custom ffmpeg plugin to the FPGA accelerator. On the 4rd row, notice how **clEnqueueNDRangeKernel** is executed 500 times, one per video frame. 
+* Scroll down to the second section called **Kernel Execution**. Notice how the total execution time for the NGCodec kernel is about 8.9 seconds and how the average processing time per frame is about 17.9 milliseconds.
+* The SDAccel reports will be discussed in more details in the next lab.
+* Close Firefox and exit the shell to finish this lab.
 
 ## Conclusion
 
