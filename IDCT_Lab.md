@@ -42,11 +42,11 @@ Before the SDAccel tool suite can be started, the environment needs to be config
     Click **OK** to confirm the selection.  
 	
 	The provided workspace:
-	* Opens a new empty project with the name **IDCT**
-	* Selects the AWS platform as target platform from the aws-fpga platform directory 
-	* Adds the host (**idct.cpp**) and kernel (**krnl_idct.cpp**) source files to the project
-	* Defines the name of the xclbin container **binary_container_1**
-	* Defines the **krnl_idct** function to be the top hardware function to be included in the xclbin container
+	* Defines the new project with the name **IDCT**
+	* Has the project associated with the AWS platform from the aws-fpga platform directory 
+	* Includes the host (**idct.cpp**) and kernel (**krnl_idct.cpp**) source files
+	* Defines the name of the xclbin container as **binary_container_1**
+	* Defines the **krnl_idct** function to be the top hardware function in the xclbin container
     * Maps the ports of the **krnl_idct** function to utilize two different DDR memories; one for reads and one for writes. 
 	* Adds the xclbin container to be the first argument provided to the executable.
 
@@ -201,11 +201,13 @@ In the previous section you familiarized with the SDAccel Performance Analysis c
 
     ![](./idctFigures/EndProfileSummary.PNG)
 
-From these reports, we can note down the expected kernel performance numbers and compare them to the original numbers.__
+    From these reports, we can note down the expected kernel performance numbers and compare them to the original numbers.
+    
     - Kernel Total Time (ms):
     - Latency (min/max):
-    - Interval (min/max):
- 
+    - Interval (min/max):	
+
+
 <a name="HostOpt"></a>
 ### Host Optimization
 
