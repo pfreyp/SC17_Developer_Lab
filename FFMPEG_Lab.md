@@ -5,7 +5,7 @@
 
 In this module you will experience the acceleration potential of AWS F1 instances by using ```ffmpeg``` to encode 20 seconds of raw YUV 1920x1080 video, first using the libx265 codec and then the [NGCodec](https://ngcodec.com/products-cloud-transcoding/) HEVC encoder optimized for F1 FPGAs.
 
-```ffmpeg``` is a very popular framework providing very fast video and audio converters. The ```ffmpeg``` code is open-source and allows for the addition of custom plugins. For this lab, a custom plugin has been created to transparently use the NGCodec HEVC encoder running on AWS F1. Users can then switch between the libx265 software codec and the F1-accelerated implementation by simply changing a parameter on the ```ffmpeg``` command line.
+```ffmpeg``` is a very popular framework providing very fast video and audio converters. The ```ffmpeg``` code is open-source and allows for the addition of custom plugins. For this lab, a custom plugin has been created to transparently use the NGCodec HEVC encoder running on AWS F1. Users can switch between the libx265 software codec and the F1-accelerated implementation by simply changing a parameter on the ```ffmpeg``` command line. The plugin uses OpenCL API calls to write video frames to the FPGA, execute the encoder and read back the compressed video. 
 
 ## Running the lab
 
@@ -70,7 +70,7 @@ Finally, you will notice that two profile summary files were generated when runn
 ```
 firefox --new-tab sdaccel_profile_summary.html &
 ```
-* At the top of the report, you find a summary of all the OpenCL calls made by the custom ffmpeg plugin to the FPGA accelerator. On the 4rd row, notice how **clEnqueueNDRangeKernel** is executed 500 times, one per video frame. 
+* At the top of the report, you find a summary of all the OpenCL calls made by the custom ffmpeg plugin to the FPGA accelerator. On the 3rd row, notice how **clEnqueueNDRangeKernel** is executed 500 times, one per video frame. 
 * Scroll down to the second section called **Kernel Execution**. Notice how the total execution time for the NGCodec kernel is about 8.9 seconds and how the average processing time per frame is about 17.9 milliseconds.
 * The SDAccel reports will be discussed in more details in the next lab.
 * Close Firefox and exit the shell to finish this lab.
