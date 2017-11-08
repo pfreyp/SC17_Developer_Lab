@@ -30,7 +30,7 @@ Once the instance is running, the EC2 console gives you information relative to 
 
 The instance just started is preconfigured with remote desktop protocol (RDP) services.
 - From your local machine, start a remote desktop protocol client
-   - On Windows: press the Windows key and type "remote desktop".  You should see the "Remote Desktop Connection" show in the list of programs.  Alternatively you could also directly invoke mstsc.exe. Set your remote desktop client to use 24-bit for color depth (Option->Display tab).
+   - On Windows: press the Windows key and type "remote desktop".  You should see the "Remote Desktop Connection" show in the list of programs.  Alternatively you could also directly invoke mstsc.exe. Set your remote desktop client to use **24-bit for color depth** (Option->Display tab).
   
    - On Linux: any RDP client such a Remmina or Vinagre are suitable
    - On macOS: Microsoft Remote Desktop from the Mac App Store
