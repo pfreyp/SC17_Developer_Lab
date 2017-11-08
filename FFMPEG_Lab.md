@@ -66,7 +66,7 @@ You will notice that the picture quality is similar for both encoders. The HEVC 
 
 Finally, you will notice that two profile summary files were generated when running the HEVC encoder on F1. These are performance reports in both html and csv formats which can be help profile the performance of tha application running on F1.
 
-* Open the SDAccel html profiling report.
+* Open the SDAccel HTML profile summary in a web browser.
 ```
 firefox --new-tab sdaccel_profile_summary.html &
 ```
