@@ -23,8 +23,7 @@ You should see one stopped EC2 F1 instance.
 ![Start](/setupFigures/start1.png?raw=true)
 
 Allow some time for the instance to start. If needed, click the **Refresh** icon in the top-right corner of the EC2 dashboard to update the instance status information.
-
-![Refresh](/setupFigures/refresh.png?raw=true)
+![Refresh](/setupFigures/refresh1.png?raw=true)
 
 Once the instance is running, the EC2 console gives you information relative to the **public IP address** of the instance.
 You will use that IP address for the next step.
@@ -53,13 +52,8 @@ You should now be connected to the instance.
 
 ## Configure the Xilinx SDAccel environment and load the workshop files
 
-* Open a terminal window and double click on the Chromium browser icon which will open on the github project for this Lab.  We suggest you **perform all your copy paste from instructions to shell within the RDP session** to avoid issues.
-
-![Desktop](/setupFigures/terminal.png?raw=true)
-
-* Click **Cancel** (maybe more than once :-) ) on the keyring popup window you might see...
-
-![Keyring](/setupFigures/keyring1.png?raw=true)
+* Open a terminal window
+* Double click on the Chromium browser icon, it open to the Lab instructions (if a "keyring" popup comes up, click Cancel).  We suggest you **perform all your copy-paste from instructions to shell within the RDP session** to avoid issues.
 
 * In a **shell**, execute the following commands to setup the SDAccel environment and get the necessary files (copy-paste the whole block of commands below in the shell if you'd like)
 ```  
