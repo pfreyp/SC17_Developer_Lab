@@ -24,14 +24,13 @@ You should see one stopped EC2 F1 instance.
 
 Allow some time for the instance to start. If needed, click the **Refresh** icon (![Refresh](/setupFigures/refresh2.png?raw=true)) in the top-right corner of the EC2 dashboard to update the instance status information.
 
-Once the instance is running, the EC2 console gives you information relative to the **public IP address** of the instance.
-You will use that IP address for the next step.
+Once the instance is running, the EC2 console gives you information relative to the **public IP address** of the instance which we will be using in the next step.
 
 ## \"Remote desktop\" to the instance
 
 The instance just started is preconfigured with remote desktop protocol (RDP) services.
 - From your local machine, start a remote desktop protocol client
-   - On Windows: press the Windows key and type "remote desktop".  You should see the "Remote Desktop Connection" show in the list of programs.  (Alternatively you could also directly invoke mstsc.exe)
+   - On Windows: press the Windows key and type "remote desktop".  You should see the "Remote Desktop Connection" show in the list of programs.  Alternatively you could also directly invoke mstsc.exe.
   
    - On Linux: any RDP client such a Remmina or Vinagre are suitable
    - On macOS: Microsoft Remote Desktop from the Mac App Store
