@@ -64,7 +64,7 @@ smplayer ./crowd8_420_1920x1080_50_NGcodec_out0_g30_gq40.hevc
 ```
 Notice that the picture quality is similar for both encoders. The HEVC encoder running on F1 is not only much faster, but it also provides better compression without sacrificing quality.
 
-Finally, a profile summary was generated when running the HEVC encoder on F1. It is a report which helps profile the performance of the application running on F1. The summary is available in both html and csv formats.
+Finally, a profile summary was generated when running the HEVC encoder on F1. This report helps profile the performance of the application running on F1.
 
 * Open the SDAccel HTML profile summary in a web browser.
 ```
