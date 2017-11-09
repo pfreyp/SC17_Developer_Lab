@@ -6,13 +6,13 @@ In this section, you will setup our instance, connect to it and download the Lab
 
 For this event, each participant has been attributed an EC2 F1 instance, and login credentials.
 
-The user name ("user" followed by a number) was communicated through email a couple of days before the event.
+The user name ("user" followed by a number) was communicated through email.
 The message contains a URL to access an EC2 F1 instance.
 ```
 If you have not received that email, please contact a staff member at the beginning of the lab session.
 ```
 - Retrieve and navigate to that URL, it points to the AWS EC2 console management page.
-- Enter the **Account ID** communicated by the staff.
+- Enter the **Account ID** given in the lab invitation email.
 - Click **Next**.
 - Enter the IAM **user** name received in the email mentioned above and the password communicated by the staff.
 - Click **Sign In**.
@@ -30,11 +30,12 @@ Once the instance is running, the EC2 console gives you information relative to 
 
 The instance just started is preconfigured with remote desktop protocol (RDP) services.
 - From your local machine, start a remote desktop protocol client
-   - On Windows: press the Windows key and type "remote desktop".  You should see the "Remote Desktop Connection" show in the list of programs.  Alternatively you could also directly invoke mstsc.exe. Set your remote desktop client to use **24-bit for color depth** (Option->Display tab).
+   - On Windows: press the Windows key and type "remote desktop".  You should see the "Remote Desktop Connection" show in the list of programs.  Alternatively you could also directly invoke mstsc.exe.
   
    - On Linux: any RDP client such a Remmina or Vinagre are suitable
    - On macOS: Microsoft Remote Desktop from the Mac App Store
-- In the RDP client, enter the **public IP address**
+- Set your remote desktop client to use **24-bit for color depth** (Option->Display tab for Windows Remote Desktop).
+- In the RDP client, enter the **public IP address** you see in the lower part of the window
 - Click **Connect**
 This should bring up a message about connection certificates. 
 - Click **Yes** to proceed.
@@ -50,7 +51,7 @@ You should now be connected to the instance.
 
 ## Configure the Xilinx SDAccel environment and load the workshop files
 
-* Open a terminal window
+* Open a terminal window (right mouse click and select "Open Ternminal")
 * Double click on the Chromium browser icon, it opens to the Lab instructions (if a "keyring" popup comes up, click **Cancel**).  We suggest you **perform all your copy-paste from instructions to shell within the RDP session** to avoid issues.
 
 * In a **shell**, execute the following commands to setup the SDAccel environment and get the necessary files (copy-paste the whole block of commands below in the shell if you'd like)
