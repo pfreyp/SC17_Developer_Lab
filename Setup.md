@@ -14,7 +14,7 @@ If you have not received that email, please contact a staff member at the beginn
 - Enter the **Account ID** from the email.
 - Click **Next**.
 - Enter the IAM **user** from the email.
- -Enter the password communicated by the staff.
+- Enter the password communicated by the staff.
 - Click **Sign In**.
 
 You should see one stopped EC2 F1 instance.
