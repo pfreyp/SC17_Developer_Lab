@@ -109,7 +109,9 @@ sh-4.2#
 
 We just compiled and executed an F1 application reusing a pre-registered AFI (Amazon FPGA Image).
 
-This concludes the setup and hello_world execution section of the Lab.
+* Close your terminal (type exit twice)
+
+This concludes the setup Lab.
 
 ---------------------------------------
 [**Start Module 2: Experiencing F1 acceleration**](FFMPEG_Lab.md)
