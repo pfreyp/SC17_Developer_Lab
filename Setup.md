@@ -66,7 +66,7 @@ source $XILINX_SDX/settings64.sh
 
 ## Running the hello_world example to check the F1 instance
 
-* The hello world example is a vector addition OpenCL example for which we will compile the host code associated to a pre-compiled xclbin file.
+* The hello world example is a vector addition OpenCL example for which we will compile the host code and use a pre-compiled FPGA image.
 ```
 cd ~/SC17_Developer_Lab/helloworld_ocl
 make TARGETS=hw DEVICES=$AWS_PLATFORM exe
