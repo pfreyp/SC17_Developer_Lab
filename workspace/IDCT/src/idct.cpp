@@ -44,7 +44,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 typedef short int16_t;
 typedef unsigned short uint16_t;
 
-void idct(const int16_t block[64], const uint16_t q[64], int16_t outp[64], bool ignore_dc);
+void idctSoft(const int16_t block[64], const uint16_t q[64], int16_t outp[64], bool ignore_dc);
 
 /* *************************************************************************** 
 
