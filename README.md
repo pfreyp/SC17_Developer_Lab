@@ -1,21 +1,20 @@
-# Xilinx Developer Lab - SC17
+# SC17 Xilinx Developer Lab
 
-Welcome to the Xilinx developer lab at SC17.
-During this session you will gain hands-on experience with AWS accelerated applications leveraging FPGA devices.
+Welcome to the SC17 Xilinx Developer Lab. During this session you will gain hands-on experience with AWS F1 and learn how to develop accelerated applications using the AWS F1 OpenCL flow and the Xilinx SDAccel development environment.
 
-Let's get started...
+This developer lab is divided in 3 modules. It is recommended to complete each module before proceeding to the next.
 
-## 1. Setup
+##### 1. Connecting to your F1 instance - The Setup Lab
 
-In this initial section, you will access an F1 instance through "remote desktop", load lab design files and access the instructions. Finally you will run your first accelerated vector addition design to confirm the system is setup as expected. 
-- [Setup Instructions](Setup.md)
+In this initial section, you will start a pre-configured EC2 F1 instance and connect to it using a remote desktop client. Once connected, you will download the Lab files and confirm you can execute a simple application on F1.
 
-## 2. The IDCT Lab
+##### 2. Experiencing F1 acceleration - The FFmpeg Lab
 
-The Discrete Cosine Transform (DCT) and its inverse (IDCT) transform time domain signals or images into spectral data. This  transformation allows very efficient compression algorithms used in most video codec.
-- [Lab Instructions](IDCT_Lab.md)
+AWS F1 instances are ideal to accelerate complex workloads. In this module you will experience the potential of F1 by using FFmpeg to run both a software implementation and an F1-optimized implementation of an H.265/HEVC encoder. 
 
-## 3. The FFMPEG Lab
+##### 3. Developing and optimizing F1 applications with SDAccel - The IDCT Lab
 
-The FFMPEG framework provides the infrastructure and implementation to effectively work with a wide variety of codecs. This framework is introduced in this tutorial and it is shown how to effectively integrate hardware accelerated algorithms.
-- [Lab Instructions](FFMPEG_Lab.md)
+In this module, you will use the SDAccel development environment to create, profile and optimize an F1 accelerator. The lab focuses on the Inverse Discrete Cosine Transform (IDCT), a compute intensive function use at the heart of all video codecs.
+
+---------------------------------------
+[**Start Module 1: Connecting to your F1 instance**](Setup.md)

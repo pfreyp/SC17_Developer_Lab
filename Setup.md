@@ -1,65 +1,72 @@
-# Lab Setup - SC17
+<table style="width:100%">
+  <tr>
+    <th width="100%" colspan="5"><h2>SC17 Xilinx Developer Lab</h2></th>
+  </tr>
+  <tr>
+    <td width="20%" align="center"><b>Introduction</b></td>
+    <td width="20%" align="center"><a href="SETUP.md">1. Connecting to your F1 instance</a></td> 
+    <td width="20%" align="center"><a href="FFMPEG_Lab.md">2. Experiencing F1 acceleration</a></td>
+    <td width="20%" align="center"><a href="IDCT_Lab.md">3. Developing F1 applications</a></td>
+    <td width="20%" align="center"><a href="WRAP_UP.md">4. Wrapping-up</td>
+  </tr>
+</table>
 
-In this section, you will setup our instance, connect to it and download the Lab files and instructions.
+---------------------------------------
+# Connecting to your F1 instance
+
+In this section, you will connect to your instance then download the Lab files and instructions.
 
 ## Start a preconfigured EC2 F1 instance
 
 For this event, each participant has been attributed an EC2 F1 instance, and login credentials.
 
-The user name ("user" followed by a number) was communicated through email a couple of days before the event.
-The message contains a URL that will help access an EC2 F1 instance.
+You should have received an email that provides you with an account ID, a user name ("user" followed by a number) and a web link to access an EC2 F1 instance.
 ```
 If you have not received that email, please contact a staff member at the beginning of the lab session.
 ```
-- Retrieve and navigate to that URL, it points to the AWS EC2 console management page.
-- Enter the **Account ID** communicated by the staff.
-- Click **"Next"**.
-- Enter the IAM **user** name received in the email mentioned above and the password communicated by the staff.
-- Click **"Sign In"**.
+- Click on that link, it points to the AWS EC2 console management page.
+- Enter the **Account ID** from the email.
+- Click **Next**.
+- Enter the IAM **user** from the email.
+- Enter the password communicated by the staff.
+- Click **Sign In**.
 
 You should see one stopped EC2 F1 instance.
-Start the instance (click on the "actions" pulldown button and select "start").
+- Start the instance by choosing the **Actions** button, then select **Instance State** and then **Start**.
 
 ![Start](/setupFigures/start1.png?raw=true)
 
-Allow some time for the instance to start and hit **refresh** if needed.
+Allow some time for the instance to start. If needed, click the **Refresh** icon (![Refresh](/setupFigures/refresh2.png?raw=true)) in the top-right corner of the EC2 dashboard to update the instance status information.
 
-![Refresh](/setupFigures/refresh.png?raw=true)
-
-Once the instance is running, the EC2 console gives you information relative to the **public IP address** of the instance.
-You will use that IP address for the next step.
+Once the instance is running, the EC2 console gives you information relative to the **public IP address** of the instance which we will be using in the next step.
 
 ## \"Remote desktop\" to the instance
 
 The instance just started is preconfigured with remote desktop protocol (RDP) services.
 - From your local machine, start a remote desktop protocol client
-   - On Windows: press the Windows key and type "remote desktop".  You should see the "Remote Desktop Connection" show in the list of programs.  (Alternatively you could also directly invoke mstsc.exe)
+   - On Windows: press the Windows key and type "remote desktop".  You should see the "Remote Desktop Connection" show in the list of programs.  Alternatively you could also directly invoke mstsc.exe.
   
    - On Linux: any RDP client such a Remmina or Vinagre are suitable
    - On macOS: Microsoft Remote Desktop from the Mac App Store
-- In the RDP client, enter the **public IP address**
+- Set your remote desktop client to use **24-bit for color depth** (Option->Display tab for Windows Remote Desktop).
+- In the RDP client, enter the **public IP address** you see in the lower part of the AWS Console Management web page in the "Description" tab
 - Click **Connect**
 This should bring up a message about connection certificates. 
-- Click **Yes** to proceed.
+- Click **Yes** to dismiss the "certificate" window.
 The Remote Desktop Connection window opens with a login prompt. 
-- Log in with the following credentials:
+- **Login** with the following credentials:
    - User: **centos**
-   - Password: **????????**
+   - Password: ******** _(provided at the event)_
    
-    ![Remote](/setupFigures/remote.png?raw=true)
+    ![Remote](/setupFigures/remote1.png?raw=true)
    
 - Click **Ok**
-You should now be connected to the instance.
+You should now be connected to the instance and see a Gnome desktop.
 
 ## Configure the Xilinx SDAccel environment and load the workshop files
 
-* Open a terminal window and double click on the Chromium browser icon which will open on the github project for this Lab.  We suggest you **perform all your copy paste from instructions to shell within the RDP session** to avoid issues.
-
-![Desktop](/setupFigures/terminal.png?raw=true)
-
-* Click **"Cancel"** (maybe more than once :-) ) on the keyring popup window you might see...
-
-![Keyring](/setupFigures/keyring1.png?raw=true)
+* Open a terminal window (right mouse click and select "Open Terminal")
+* Double click on the Chromium browser icon, it opens to the Lab instructions (if a "keyring" popup comes up, click **Cancel**).  We suggest you **perform all your copy-paste from instructions to shell within the RDP session** to avoid issues.
 
 * In a **shell**, execute the following commands to setup the SDAccel environment and get the necessary files (copy-paste the whole block of commands below in the shell if you'd like)
 ```  
@@ -73,10 +80,10 @@ source $XILINX_SDX/settings64.sh
 
 ## Running the hello_world example to check the F1 instance
 
-* The hello world example is a vector addition OpenCL example for which we will compile the host code associated to a pre-compiled xclbin file.
+* The hello world example is a vector addition OpenCL example for which we will compile the host code and use a pre-compiled FPGA image.
 ```
-cd /home/centos/SC17_Developer_Lab/helloworld_ocl
-make check TARGETS=hw_emu DEVICES=$AWS_PLATFORM all
+cd ~/SC17_Developer_Lab/helloworld_ocl
+make TARGETS=hw DEVICES=$AWS_PLATFORM exe
 sudo sh
 source /opt/Xilinx/SDx/2017.1.rte/setup.sh
 ./helloworld
@@ -116,6 +123,12 @@ sh-4.2#
 
 We just compiled and executed an F1 application reusing a pre-registered AFI (Amazon FPGA Image).
 
-This concludes the setup and hello_world execution section of the Lab.
+* Close your terminal (type exit twice)
 
-[Back to main README...](README.md)
+This concludes the setup Lab.
+
+---------------------------------------
+
+<p align="center"><b>
+Start the next module: <a href="FFMPEG_Lab.md">2: Experiencing F1 acceleration</a>
+</b></p>

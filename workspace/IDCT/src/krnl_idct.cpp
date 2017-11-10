@@ -70,7 +70,6 @@ void idct(const int16_t block[64],
   #pragma HLS INLINE
 
   int32_t intermed[64];
-  #pragma HLS ARRAY_PARTITION variable=intermed complete dim=1
 
   const uint16_t w1 = 2841; // 2048*sqrt(2)*cos(1*pi/16)
   const uint16_t w2 = 2676; // 2048*sqrt(2)*cos(2*pi/16)
@@ -254,11 +253,8 @@ void execute(hls::stream<int512_t> &iblock,
     #pragma HLS PIPELINE II=2
     
     int16_t iiblock[64];
-    // #pragma HLS ARRAY_PARTITION variable=iiblock complete
     uint16_t iiq[64];
-    // #pragma HLS ARRAY_PARTITION variable=iiq     complete
     int16_t iivoutp[64];
-    // #pragma HLS ARRAY_PARTITION variable=iivoutp complete
 
     for(short j = 0; j < 64/32; j++) {
       if(i==0) {

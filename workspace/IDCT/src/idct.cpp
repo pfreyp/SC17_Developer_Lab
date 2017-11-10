@@ -44,7 +44,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 typedef short int16_t;
 typedef unsigned short uint16_t;
 
-void idct(const int16_t block[64], const uint16_t q[64], int16_t outp[64], bool ignore_dc);
+void idctSoft(const int16_t block[64], const uint16_t q[64], int16_t outp[64], bool ignore_dc);
 
 /* *************************************************************************** 
 
@@ -210,7 +210,7 @@ class.
 *************************************************************************** */
 class oclDct {
 
-#define NUM_SCHED 6
+#define NUM_SCHED 1
 
 public:
   oclDct();
@@ -501,7 +501,7 @@ void runCPU(
 	    bool ignore_dc
 	    ) {
   for(size_t i = 0; i < blocks; i++){
-    idct(&source_block[i*64], &source_q[0], &golden_vpout[i*64], ignore_dc);
+    idctSoft(&source_block[i*64], &source_q[0], &golden_vpout[i*64], ignore_dc);
   }
 }
 
@@ -664,6 +664,13 @@ int main(int argc, char* argv[]) {
   std::cout << "Setup complete" << std::endl;
 
 
+  // *********** Host (CPU) execution **********
+  std::cout << "Running CPU version" << std::endl;
+  auto cpu_begin = std::chrono::high_resolution_clock::now();
+  runCPU(blocks, source_block, source_q, golden_vpout, ignore_dc);
+  auto cpu_end = std::chrono::high_resolution_clock::now();
+  
+
   // *********** Accelerator execution **********
   std::cout << "Running FPGA version" << std::endl;
   auto fpga_begin = std::chrono::high_resolution_clock::now();
@@ -678,15 +685,6 @@ int main(int argc, char* argv[]) {
   auto fpga_end = std::chrono::high_resolution_clock::now();
 
 
-  // *********** Host (CPU) execution **********
-  std::cout << "Running CPU version" << std::endl;
-  auto cpu_begin = std::chrono::high_resolution_clock::now();
-  runCPU(blocks, source_block, source_q, golden_vpout, ignore_dc);
-  auto cpu_end = std::chrono::high_resolution_clock::now();
-  
-  std::cout << "Runs complete validating results" << std::endl;
-
-
   // *********** OpenCL Host Code cleanup **********
 
   clReleaseCommandQueue(q);
@@ -696,6 +694,9 @@ int main(int argc, char* argv[]) {
 
 
   // *********** Comparison (Host to Acceleration)  **********
+
+  std::cout << "Runs complete validating results" << std::endl;
+
   int krnl_match = 0;
   for(size_t i = 0; i < 64*blocks; i++){
     if(result_vpout[i] != golden_vpout[i]){
@@ -709,22 +710,29 @@ int main(int argc, char* argv[]) {
 
   std::cout << "TEST " << (krnl_match ? "FAILED" : "PASSED") << std::endl;
 
-
   // *********** Computational Statistics  **********
-  std::chrono::duration<double> cpu_duration = cpu_end - cpu_begin;
-  std::chrono::duration<double> fpga_duration = fpga_end - fpga_begin;
+  //
+  // Only reported in the HW execution mode as wall clock time is meaningless in
+  // emulation.
+  //
+  if (xcl_mode == NULL) {
+    std::chrono::duration<double> cpu_duration = cpu_end - cpu_begin;
+    std::chrono::duration<double> fpga_duration = fpga_end - fpga_begin;
 
-  std::cout << "CPU Time:        " << cpu_duration.count() << " s" << std::endl;
-  std::cout << "CPU Throughput:  " 
-	    << (double) blocks*128 / cpu_duration.count() / (1024.0*1024.0)
-	    << " MB/s" << std::endl;
-  std::cout << "FPGA Time:       " << fpga_duration.count() << " s" << std::endl;
-  std::cout << "FPGA Throughput: " 
-	    << (double) blocks*128 / fpga_duration.count() / (1024.0*1024.0)
-	    << " MB/s" << std::endl;
-  std::cout << "FPGA PCIe Throughput: " 
-	    << (2*(double) blocks*128 + 128) / fpga_duration.count() / (1024.0*1024.0)
-	    << " MB/s" << std::endl;
+    std::cout << "CPU Time:        " << cpu_duration.count() << " s" << std::endl;
+    std::cout << "CPU Throughput:  " 
+	      << (double) blocks*128 / cpu_duration.count() / (1024.0*1024.0)
+	      << " MB/s" << std::endl;
+    std::cout << "FPGA Time:       " << fpga_duration.count() << " s" << std::endl;
+    std::cout << "FPGA Throughput: " 
+	      << (double) blocks*128 / fpga_duration.count() / (1024.0*1024.0)
+	      << " MB/s" << std::endl;
+    std::cout << "FPGA PCIe Throughput: " 
+	      << (2*(double) blocks*128 + 128) / fpga_duration.count() / (1024.0*1024.0)
+	      << " MB/s" << std::endl;
+  } else {
+    std::cout << "RUN COMPLETE" << std::endl;
+  }
 
   return (krnl_match ? EXIT_FAILURE :  EXIT_SUCCESS);
 }
@@ -733,16 +741,16 @@ int main(int argc, char* argv[]) {
 
 /* *************************************************************************** 
 
-idct
+idctSoft
 
 Original software implementation of IDCT algorithm used to generate
 golden reference data.
 
 *************************************************************************** */
-void idct(const int16_t block[64], 
-	  const uint16_t q[64], 
-	  int16_t outp[64], 
-	  bool ignore_dc) {
+void idctSoft(const int16_t block[64], 
+	      const uint16_t q[64], 
+	      int16_t outp[64], 
+	      bool ignore_dc) {
   int32_t intermed[64];
 
   const uint16_t w1 = 2841; // 2048*sqrt(2)*cos(1*pi/16)
