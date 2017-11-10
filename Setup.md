@@ -1,3 +1,17 @@
+<table style="width:100%">
+  <tr>
+    <th width="100%" colspan="5"><h2>SC17 Xilinx Developer Lab</h2></th>
+  </tr>
+  <tr>
+    <td width="20%" align="center"><b>Introduction</b></td>
+    <td width="20%" align="center"><a href="SETUP.md">1. Connecting to your F1 instance</a></td> 
+    <td width="20%" align="center"><a href="FFMPEG_Lab.md">2. Experiencing F1 acceleration</a></td>
+    <td width="20%" align="center"><a href="IDCT_Lab.md">3. Developing F1 applications</a></td>
+    <td width="20%" align="center"><a href="WRAP_UP.md">4. Wrapping-up</td>
+  </tr>
+</table>
+
+---------------------------------------
 # Connecting to your F1 instance
 
 In this section, you will connect to your instance then download the Lab files and instructions.
@@ -112,6 +126,12 @@ We just compiled and executed an F1 application reusing a pre-registered AFI (Am
 * Close your terminal (type exit twice)
 
 This concludes the setup Lab.
+
+---------------------------------------
+
+<p align="center"><b>
+Start the next module: <a href="SETUP.md">1. Connecting to your F1 instance</a>
+</b></p>
 
 ---------------------------------------
 [**Start Module 2: Experiencing F1 acceleration**](FFMPEG_Lab.md)
