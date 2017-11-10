@@ -52,7 +52,7 @@ The instance just started is preconfigured with remote desktop protocol (RDP) se
 - In the RDP client, enter the **public IP address** you see in the lower part of the AWS Console Management web page in the "Description" tab
 - Click **Connect**
 This should bring up a message about connection certificates. 
-- Click **Yes** to proceed.
+- Click **Yes** to dismiss the "certificate" window.
 The Remote Desktop Connection window opens with a login prompt. 
 - **Login** with the following credentials:
    - User: **centos**
