@@ -303,32 +303,32 @@ Now we are ready to run a fully optimized version of the design. However, the pr
 
 1.  On the Amazon F1 instance it is necessary to register the kernel with the secure storage system. This is performed with the help of the **create_sdaccel_afi.sh** script. Running this script kicks off the registration process and it's completion, after approximately one hour, can be verified using the following command from the terminal.
 
-``` shell
-aws ec2 describe-fpga-images --fpga-image-ids afi-0d59c0f2d5fe9df1f
-```
+    ``` shell
+    aws ec2 describe-fpga-images --fpga-image-ids afi-0d59c0f2d5fe9df1f
+    ```
 
-You can try it with the preregistered AFI ID for this tutorial: **afi-0d59c0f2d5fe9df1f**. The output of this command should contain:
+    You can try it with the preregistered AFI ID for this tutorial: **afi-0d59c0f2d5fe9df1f**. The output of this command should contain:
 
-``` shell
-...
-"State": {
-    "Code": "available"
-},
-...
-```
+    ``` shell
+    ...
+    "State": {
+        "Code": "available"
+    },
+    ...
+    ```
 
-A good starting point regarding the specifics of the Amazon SDAccel flow is the ![Quick Start Guide to Accelerating your C/C++ application on AWS F1 FPGA Instance with SDAccel](https://github.com/aws/aws-fpga/blob/master/SDAccel/README.md)
+    A good starting point regarding the specifics of the Amazon SDAccel flow is the ![Quick Start Guide to Accelerating your C/C++ application on AWS F1 FPGA Instance with SDAccel](https://github.com/aws/aws-fpga/blob/master/SDAccel/README.md)
 
 1. During runtime, the FPGA image is accessed through a secure xclbin handle "binary_container_1.awsxclbin". This handle is provided to you in your idct directory (~/SC17_Developer_Lab/idct/xclbin/binary_container_1.awsxclbin). Since there is no difference in the host executable, we can run the hardware emulation idct executable with the secure handle, executing the algorithm on the FPGA.
 
-``` shell
-sudo sh
-source /opt/Xilinx/SDx/2017.1.rte/setup.sh
-cp /home/centos/SC17_Developer_Lab/workspace/IDCT/Emulation-HW/IDCT.exe .
-./IDCT.exe /home/centos/SC17_Developer_Lab/idct/xclbin/binary_container_1.awsxclbin
-```
+    ``` shell
+    sudo sh
+    source /opt/Xilinx/SDx/2017.1.rte/setup.sh
+    cp /home/centos/SC17_Developer_Lab/workspace/IDCT/Emulation-HW/IDCT.exe .
+    ./IDCT.exe /home/centos/SC17_Developer_Lab/idct/xclbin/binary_container_1.awsxclbin
+    ```
 
-Please note, the performance differences between the CPU run and the FPGA accelerated implementation.
+    Please note, the performance differences between the CPU run and the FPGA accelerated implementation.
 
 <a name="Conclusion"></a>
 ## Conclusion  
