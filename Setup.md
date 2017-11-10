@@ -130,9 +130,5 @@ This concludes the setup Lab.
 ---------------------------------------
 
 <p align="center"><b>
-Start the next module: <a href="SETUP.md">1. Connecting to your F1 instance</a>
+Start the next module: <a href="FFMPEG_Lab.md">2: Experiencing F1 acceleration</a>
 </b></p>
-
----------------------------------------
-[**Start Module 2: Experiencing F1 acceleration**](FFMPEG_Lab.md)
-
