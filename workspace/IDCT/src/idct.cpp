@@ -670,8 +670,6 @@ int main(int argc, char* argv[]) {
   runCPU(blocks, source_block, source_q, golden_vpout, ignore_dc);
   auto cpu_end = std::chrono::high_resolution_clock::now();
   
-  std::cout << "Runs complete validating results" << std::endl;
-
 
   // *********** Accelerator execution **********
   std::cout << "Running FPGA version" << std::endl;
@@ -696,6 +694,9 @@ int main(int argc, char* argv[]) {
 
 
   // *********** Comparison (Host to Acceleration)  **********
+
+  std::cout << "Runs complete validating results" << std::endl;
+
   int krnl_match = 0;
   for(size_t i = 0; i < 64*blocks; i++){
     if(result_vpout[i] != golden_vpout[i]){
