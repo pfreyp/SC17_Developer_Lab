@@ -49,7 +49,7 @@ The instance just started is preconfigured with remote desktop protocol (RDP) se
    - On Linux: any RDP client such a Remmina or Vinagre are suitable
    - On macOS: Microsoft Remote Desktop from the Mac App Store
 - Set your remote desktop client to use **24-bit for color depth** (Option->Display tab for Windows Remote Desktop).
-- In the RDP client, enter the **public IP address** you see in the lower part of the AWS Console Management web page
+- In the RDP client, enter the **public IP address** you see in the lower part of the AWS Console Management web page in the "Description" tab
 - Click **Connect**
 This should bring up a message about connection certificates. 
 - Click **Yes** to proceed.
