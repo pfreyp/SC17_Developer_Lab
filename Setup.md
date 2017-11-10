@@ -61,11 +61,11 @@ The Remote Desktop Connection window opens with a login prompt.
     ![Remote](/setupFigures/remote1.png?raw=true)
    
 - Click **Ok**
-You should now be connected to the instance.
+You should now be connected to the instance and see a Gnome desktop.
 
 ## Configure the Xilinx SDAccel environment and load the workshop files
 
-* Open a terminal window (right mouse click and select "Open Ternminal")
+* Open a terminal window (right mouse click and select "Open Terminal")
 * Double click on the Chromium browser icon, it opens to the Lab instructions (if a "keyring" popup comes up, click **Cancel**).  We suggest you **perform all your copy-paste from instructions to shell within the RDP session** to avoid issues.
 
 * In a **shell**, execute the following commands to setup the SDAccel environment and get the necessary files (copy-paste the whole block of commands below in the shell if you'd like)
